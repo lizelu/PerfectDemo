@@ -1,0 +1,59 @@
+{
+  "": {
+    "swift-dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/master.swiftdeps"
+  },
+  "/Users/lizelu/Documents/Perfect/PerfectTemplate/Packages/PerfectHTTP-2.0.5/Sources/HTTPFilter.swift": {
+    "dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/HTTPFilter.d",
+    "object": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/HTTPFilter.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/HTTPFilter~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/HTTPFilter.swiftdeps"
+  },
+  "/Users/lizelu/Documents/Perfect/PerfectTemplate/Packages/PerfectHTTP-2.0.5/Sources/HTTPHeaders.swift": {
+    "dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/HTTPHeaders.d",
+    "object": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/HTTPHeaders.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/HTTPHeaders~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/HTTPHeaders.swiftdeps"
+  },
+  "/Users/lizelu/Documents/Perfect/PerfectTemplate/Packages/PerfectHTTP-2.0.5/Sources/HTTPMethod.swift": {
+    "dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/HTTPMethod.d",
+    "object": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/HTTPMethod.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/HTTPMethod~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/HTTPMethod.swiftdeps"
+  },
+  "/Users/lizelu/Documents/Perfect/PerfectTemplate/Packages/PerfectHTTP-2.0.5/Sources/HTTPRequest.swift": {
+    "dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/HTTPRequest.d",
+    "object": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/HTTPRequest.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/HTTPRequest~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/HTTPRequest.swiftdeps"
+  },
+  "/Users/lizelu/Documents/Perfect/PerfectTemplate/Packages/PerfectHTTP-2.0.5/Sources/HTTPResponse.swift": {
+    "dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/HTTPResponse.d",
+    "object": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/HTTPResponse.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/HTTPResponse~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/HTTPResponse.swiftdeps"
+  },
+  "/Users/lizelu/Documents/Perfect/PerfectTemplate/Packages/PerfectHTTP-2.0.5/Sources/MimeReader.swift": {
+    "dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/MimeReader.d",
+    "object": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/MimeReader.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/MimeReader~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/MimeReader.swiftdeps"
+  },
+  "/Users/lizelu/Documents/Perfect/PerfectTemplate/Packages/PerfectHTTP-2.0.5/Sources/MimeType.swift": {
+    "dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/MimeType.d",
+    "object": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/MimeType.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/MimeType~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/MimeType.swiftdeps"
+  },
+  "/Users/lizelu/Documents/Perfect/PerfectTemplate/Packages/PerfectHTTP-2.0.5/Sources/Routing.swift": {
+    "dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/Routing.d",
+    "object": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/Routing.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/Routing~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/Routing.swiftdeps"
+  },
+  "/Users/lizelu/Documents/Perfect/PerfectTemplate/Packages/PerfectHTTP-2.0.5/Sources/StaticFileHandler.swift": {
+    "dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/StaticFileHandler.d",
+    "object": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/StaticFileHandler.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/StaticFileHandler~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTP.build/StaticFileHandler.swiftdeps"
+  }
+}

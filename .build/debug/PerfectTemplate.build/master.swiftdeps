@@ -1,0 +1,6 @@
+version: "Apple Swift version 3.0.1 (swiftlang-800.0.58.6 clang-800.0.42.1)"
+options: "21d056243e98ec2d5be84f633fa2c90a"
+build_time: [533356668, 168291000]
+inputs:
+  "/Users/lizelu/Documents/Perfect/PerfectTemplate/Sources/arguments.swift": [533010472, 0]
+  "/Users/lizelu/Documents/Perfect/PerfectTemplate/Sources/main.swift": [533355848, 0]

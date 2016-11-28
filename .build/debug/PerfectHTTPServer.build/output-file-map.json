@@ -1,0 +1,35 @@
+{
+  "": {
+    "swift-dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTPServer.build/master.swiftdeps"
+  },
+  "/Users/lizelu/Documents/Perfect/PerfectTemplate/Packages/PerfectHTTPServer-2.0.4/Sources/PerfectHTTPServer/HPACK.swift": {
+    "dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTPServer.build/HPACK.d",
+    "object": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTPServer.build/HPACK.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTPServer.build/HPACK~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTPServer.build/HPACK.swiftdeps"
+  },
+  "/Users/lizelu/Documents/Perfect/PerfectTemplate/Packages/PerfectHTTPServer-2.0.4/Sources/PerfectHTTPServer/HTTP11Request.swift": {
+    "dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTPServer.build/HTTP11Request.d",
+    "object": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTPServer.build/HTTP11Request.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTPServer.build/HTTP11Request~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTPServer.build/HTTP11Request.swiftdeps"
+  },
+  "/Users/lizelu/Documents/Perfect/PerfectTemplate/Packages/PerfectHTTPServer-2.0.4/Sources/PerfectHTTPServer/HTTP11Response.swift": {
+    "dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTPServer.build/HTTP11Response.d",
+    "object": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTPServer.build/HTTP11Response.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTPServer.build/HTTP11Response~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTPServer.build/HTTP11Response.swiftdeps"
+  },
+  "/Users/lizelu/Documents/Perfect/PerfectTemplate/Packages/PerfectHTTPServer-2.0.4/Sources/PerfectHTTPServer/HTTP2.swift": {
+    "dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTPServer.build/HTTP2.d",
+    "object": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTPServer.build/HTTP2.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTPServer.build/HTTP2~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTPServer.build/HTTP2.swiftdeps"
+  },
+  "/Users/lizelu/Documents/Perfect/PerfectTemplate/Packages/PerfectHTTPServer-2.0.4/Sources/PerfectHTTPServer/HTTPServer.swift": {
+    "dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTPServer.build/HTTPServer.d",
+    "object": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTPServer.build/HTTPServer.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTPServer.build/HTTPServer~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectHTTPServer.build/HTTPServer.swiftdeps"
+  }
+}

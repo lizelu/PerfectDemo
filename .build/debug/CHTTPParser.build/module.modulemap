@@ -1,0 +1,5 @@
+module CHTTPParser {
+    umbrella "/Users/lizelu/Documents/Perfect/PerfectTemplate/Packages/PerfectHTTPServer-2.0.4/Sources/CHTTPParser/include"
+    link "CHTTPParser"
+    export *
+}

@@ -1,0 +1,17 @@
+{
+  "": {
+    "swift-dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectTemplate.build/master.swiftdeps"
+  },
+  "/Users/lizelu/Documents/Perfect/PerfectTemplate/Sources/arguments.swift": {
+    "dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectTemplate.build/arguments.d",
+    "object": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectTemplate.build/arguments.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectTemplate.build/arguments~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectTemplate.build/arguments.swiftdeps"
+  },
+  "/Users/lizelu/Documents/Perfect/PerfectTemplate/Sources/main.swift": {
+    "dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectTemplate.build/main.d",
+    "object": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectTemplate.build/main.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectTemplate.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/Perfect/PerfectTemplate/.build/debug/PerfectTemplate.build/main.swiftdeps"
+  }
+}
