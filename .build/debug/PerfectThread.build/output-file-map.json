@@ -1,0 +1,17 @@
+{
+  "": {
+    "swift-dependencies": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectThread.build/master.swiftdeps"
+  },
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectThread-2.0.3/Sources/Threading.swift": {
+    "dependencies": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectThread.build/Threading.d",
+    "object": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectThread.build/Threading.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectThread.build/Threading~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectThread.build/Threading.swiftdeps"
+  },
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectThread-2.0.3/Sources/ThreadQueue.swift": {
+    "dependencies": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectThread.build/ThreadQueue.d",
+    "object": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectThread.build/ThreadQueue.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectThread.build/ThreadQueue~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectThread.build/ThreadQueue.swiftdeps"
+  }
+}

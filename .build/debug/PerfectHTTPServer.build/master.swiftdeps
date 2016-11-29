@@ -1,0 +1,9 @@
+version: "Apple Swift version 3.0.1 (swiftlang-800.0.58.6 clang-800.0.42.1)"
+options: "b5260410f07e6dd74536aa39ab57d7de"
+build_time: [533716701, 625951000]
+inputs:
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectHTTPServer-2.0.7/Sources/PerfectHTTPServer/HPACK.swift": [533714817, 0]
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectHTTPServer-2.0.7/Sources/PerfectHTTPServer/HTTP11Request.swift": [533714817, 0]
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectHTTPServer-2.0.7/Sources/PerfectHTTPServer/HTTP11Response.swift": [533714817, 0]
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectHTTPServer-2.0.7/Sources/PerfectHTTPServer/HTTP2.swift": [533714817, 0]
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectHTTPServer-2.0.7/Sources/PerfectHTTPServer/HTTPServer.swift": [533714817, 0]

@@ -1,0 +1,13 @@
+version: "Apple Swift version 3.0.1 (swiftlang-800.0.58.6 clang-800.0.42.1)"
+options: "15a0ca9943d5f4a1c2dde048390a7e27"
+build_time: [533716699, 533360000]
+inputs:
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectHTTP-2.0.6/Sources/HTTPFilter.swift": [533714847, 0]
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectHTTP-2.0.6/Sources/HTTPHeaders.swift": [533714847, 0]
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectHTTP-2.0.6/Sources/HTTPMethod.swift": [533714847, 0]
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectHTTP-2.0.6/Sources/HTTPRequest.swift": [533714847, 0]
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectHTTP-2.0.6/Sources/HTTPResponse.swift": [533714847, 0]
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectHTTP-2.0.6/Sources/MimeReader.swift": [533714847, 0]
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectHTTP-2.0.6/Sources/MimeType.swift": [533714847, 0]
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectHTTP-2.0.6/Sources/Routing.swift": [533714847, 0]
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectHTTP-2.0.6/Sources/StaticFileHandler.swift": [533714847, 0]

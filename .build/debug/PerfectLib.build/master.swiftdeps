@@ -1,0 +1,14 @@
+version: "Apple Swift version 3.0.1 (swiftlang-800.0.58.6 clang-800.0.42.1)"
+options: "bf495e6ae9af89205051c00f794db354"
+build_time: [533716691, 860632000]
+inputs:
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectLib-2.0.4/Sources/PerfectLib/Bytes.swift": [533714941, 0]
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectLib-2.0.4/Sources/PerfectLib/Dir.swift": [533714941, 0]
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectLib-2.0.4/Sources/PerfectLib/File.swift": [533714941, 0]
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectLib-2.0.4/Sources/PerfectLib/JSONConvertible.swift": [533714941, 0]
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectLib-2.0.4/Sources/PerfectLib/Log.swift": [533714941, 0]
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectLib-2.0.4/Sources/PerfectLib/PerfectError.swift": [533714941, 0]
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectLib-2.0.4/Sources/PerfectLib/PerfectServer.swift": [533714941, 0]
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectLib-2.0.4/Sources/PerfectLib/SwiftCompatibility.swift": [533714941, 0]
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectLib-2.0.4/Sources/PerfectLib/SysProcess.swift": [533714941, 0]
+  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectLib-2.0.4/Sources/PerfectLib/Utilities.swift": [533714941, 0]
