@@ -26,13 +26,13 @@ let server = HTTPServer()
 
 // Register your own routes and handlers
 var routes = Routes()
-routes.add(method: .get, uri: "/", handler: {
-		request, response in
-		response.setHeader(.contentType, value: "text/html")
-		response.appendBody(string: "<html><title>Hello, world!</title><body>Hello, world!</body></html>")
-		response.completed()
-	}
-)
+//routes.add(method: .get, uri: "/", handler: {
+//		request, response in
+//		response.setHeader(.contentType, value: "text/html")
+//		response.appendBody(string: "<html><title>你好!</title><body>你好!</body></html>")
+//		response.completed()
+//	}
+//)
 
 // Add the routes to the server.
 server.addRoutes(routes)
