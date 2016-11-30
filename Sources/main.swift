@@ -26,6 +26,16 @@ let server = HTTPServer()
 
 // Register your own routes and handlers
 var routes = Routes()
+
+//MARK: - 路由
+//MARK: - 路由变量
+let valueKey = "key"
+routes.add(method: .get, uri: "/path1/{\(valueKey)}/detail") { (request, response) in
+    response.appendBody(string: "该URL中的路由变量为：\(request.urlVariables[valueKey])")
+    response.completed()
+}
+
+//MARK: - 静态路由
 routes.add(method: .get, uri: "/hello", handler: {
 		request, response in
 		response.setHeader(.contentType, value: "text/html")
@@ -34,7 +44,51 @@ routes.add(method: .get, uri: "/hello", handler: {
 	}
 )
 
-//返回图片
+//MAKR: - 通配符路径
+routes.add(method: .get, uri: "/path2/*/detail") { (request, response) in
+    response.appendBody(string: "通配符URL为：\(request.path)")
+    response.completed()
+}
+
+//MAKR: - 结尾通配符
+routes.add(method: .get, uri: "/path3/**") { (request, response) in
+    response.appendBody(string: "该URL中的结尾通配符对应的变量：\(request.urlVariables[routeTrailingWildcardKey])")
+    response.completed()
+}
+
+//优先级：路由变量 > 静态路由 > 通配符路径 > 结尾通配符
+
+//MARK: - 配置路由版本
+// 为程序接口API版本v1创建路由表
+var api = Routes()
+api.add(method: .get, uri: "/call1", handler: { _, response in
+    response.setBody(string: "程序接口API版本v1已经调用")
+    response.completed()
+})
+api.add(method: .get, uri: "/call2", handler: { _, response in
+    response.setBody(string: "程序接口API版本v2已经调用")
+    response.completed()
+})
+
+var api1Routes = Routes(baseUri: "/v1") // API版本v1
+var api2Routes = Routes(baseUri: "/v2") // API版本v2
+
+api1Routes.add(api) // 为API版本v1增加主调函数
+api2Routes.add(api) // 为API版本v2增加主调函数
+
+// 更新API版本v2主调函数
+api2Routes.add(method: .get, uri: "/call2", handler: { _, response in
+    response.setBody(string: "程序接口API版本v2已经调用第二种方法")
+    response.completed()
+})
+
+// 将两个版本的内容都注册到服务器主路由表上
+routes.add(api1Routes)
+routes.add(api2Routes)
+
+
+
+//MARK: - 返回图片
 routes.add(method: .get, uri: "/cat", handler: {
         request, response in
         let docRoot = request.documentRoot
@@ -53,14 +107,35 @@ routes.add(method: .get, uri: "/cat", handler: {
     }
 )
 
-//获取请求参数: http://localhost:8181/params?key1=value1&key2=value2&key3=value3
+
+//MARK: - 获取请求参数:
 routes.add(method: .get, uri: "/params") { (reqeust, response) in
     let params = reqeust.params()
-    response.appendBody(string: "请求参数：\(reqeust.params())")
+    response.appendBody(string: "GET请求参数：\(reqeust.params())")
     response.completed()
 }
 
-//返回Json数据
+routes.add(method: .post, uri: "/params") { (reqeust, response) in
+    let params = reqeust.params()
+    response.appendBody(string: "POST请求参数：\(reqeust.params())")
+    response.completed()
+}
+
+routes.add(method: .put, uri: "/params") { (reqeust, response) in
+    let params = reqeust.params()
+    response.appendBody(string: "PUT请求参数：\(reqeust.params())")
+    response.completed()
+}
+
+routes.add(method: .delete, uri: "/params") { (reqeust, response) in
+    let params = reqeust.params()
+    response.appendBody(string: "DELETE请求参数：\(reqeust.params())")
+    response.completed()
+}
+
+
+
+//MARK: - 返回Json数据
 routes.add(method: .get, uri: "/json") { (reqeust, response) in
     let dic: [String : Any] = ["key1": "value1",
                                "key2": ["item1", 2, 3],
@@ -74,14 +149,18 @@ routes.add(method: .get, uri: "/json") { (reqeust, response) in
     response.completed()
 }
 
-//Request——Redirect
+
+
+//MARK: - Request——Redirect
 routes.add(method: .get, uri: "/redirect") { (reqeust, response) in
     response.status = .movedPermanently
     response.setHeader(HTTPResponseHeader.Name.location, value: "http://cnblogs.com")
     response.completed()
 }
 
-//定制404风格
+
+
+//MARK: - 定制404页面风格
 struct Filter404: HTTPResponseFilter {
     func filterBody(response: HTTPResponse, callback: (HTTPResponseFilterResult) -> ()) {
         callback(.continue)
@@ -99,7 +178,6 @@ struct Filter404: HTTPResponseFilter {
     }
 }
 server.setResponseFilters([(Filter404(), .high)])
-
 
 
 // Add the routes to the server.
