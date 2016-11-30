@@ -109,28 +109,38 @@ routes.add(method: .get, uri: "/cat", handler: {
 
 
 //MARK: - 获取请求参数:
-routes.add(method: .get, uri: "/params") { (reqeust, response) in
-    print("GET:\(reqeust.params())")
-    response.appendBody(string: "GET请求参数：\(reqeust.params())")
+func convertJons(params: [(String, String)]) -> [String: Any] {
+    var jsonDic = [String: Any]()
+    for item in params{
+        jsonDic[item.0] = item.1
+    }
+    return jsonDic
+}
+
+func requestHandler(request: HTTPRequest, response:HTTPResponse) {
+    print("\(request.method):\(request.params())")
+    do {
+        try response.setBody(json: convertJons(params:request.params()))
+    } catch {
+        response.setBody(string: "Error")
+    }
     response.completed()
 }
 
-routes.add(method: .post, uri: "/params") { (reqeust, response) in
-    print("POST:\(reqeust.params())")
-    response.appendBody(string: "POST请求参数：\(reqeust.params())")
-    response.completed()
+routes.add(method: .get, uri: "/params") { (request, response) in
+    requestHandler(request: request, response: response)
 }
 
-routes.add(method: .put, uri: "/params") { (reqeust, response) in
-    print("PUT:\(reqeust.params())")
-    response.appendBody(string: "PUT请求参数：\(reqeust)")
-    response.completed()
+routes.add(method: .post, uri: "/params") { (request, response) in
+   requestHandler(request: request, response: response)
 }
 
-routes.add(method: .delete, uri: "/params") { (reqeust, response) in
-    print("DELETE:\(reqeust.params())")
-    response.appendBody(string: "DELETE请求参数：\(reqeust)")
-    response.completed()
+routes.add(method: .put, uri: "/params") { (request, response) in
+    requestHandler(request: request, response: response)
+}
+
+routes.add(method: .delete, uri: "/params") { (request, response) in
+   requestHandler(request: request, response: response)
 }
 
 

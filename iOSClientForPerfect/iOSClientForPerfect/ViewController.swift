@@ -84,7 +84,7 @@ class ViewController: UIViewController {
             
             if data != nil {    //对Data进行Json解析
                 let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
-                print(json)
+                print(json!)
             }
         });
         sessionTask.resume()
