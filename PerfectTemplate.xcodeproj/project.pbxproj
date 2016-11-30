@@ -1622,7 +1622,7 @@
 		OBJ_743 /* PerfectHTTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PerfectHTTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_744 /* CHTTPParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CHTTPParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_745 /* PerfectHTTPServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PerfectHTTPServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_746 /* PerfectTemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = PerfectTemplate; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_746 /* PerfectTemplate */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = PerfectTemplate; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_75 /* bio_enc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bio_enc.c; sourceTree = "<group>"; };
 		OBJ_76 /* bio_err.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bio_err.c; sourceTree = "<group>"; };
 		OBJ_77 /* bio_lib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bio_lib.c; sourceTree = "<group>"; };
@@ -3924,7 +3924,12 @@
 				);
 				INFOPLIST_FILE = PerfectTemplate.xcodeproj/PerfectTemplate_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_TEMP_DIR)/SymlinkLibs/";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_TEMP_DIR)/SymlinkLibs/",
+					"$(PROJECT_DIR)",
+					"-",
+					Recursive,
+				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SUPPORTED_PLATFORMS = macosx;
@@ -3946,7 +3951,12 @@
 				);
 				INFOPLIST_FILE = PerfectTemplate.xcodeproj/PerfectTemplate_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_TEMP_DIR)/SymlinkLibs/";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_TEMP_DIR)/SymlinkLibs/",
+					"$(PROJECT_DIR)",
+					"-",
+					Recursive,
+				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SUPPORTED_PLATFORMS = macosx;
