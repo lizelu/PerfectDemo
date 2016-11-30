@@ -110,26 +110,26 @@ routes.add(method: .get, uri: "/cat", handler: {
 
 //MARK: - 获取请求参数:
 routes.add(method: .get, uri: "/params") { (reqeust, response) in
-    let params = reqeust.params()
+    print("GET:\(reqeust.params())")
     response.appendBody(string: "GET请求参数：\(reqeust.params())")
     response.completed()
 }
 
 routes.add(method: .post, uri: "/params") { (reqeust, response) in
-    let params = reqeust.params()
+    print("POST:\(reqeust.params())")
     response.appendBody(string: "POST请求参数：\(reqeust.params())")
     response.completed()
 }
 
 routes.add(method: .put, uri: "/params") { (reqeust, response) in
-    let params = reqeust.params()
-    response.appendBody(string: "PUT请求参数：\(reqeust.params())")
+    print("PUT:\(reqeust.params())")
+    response.appendBody(string: "PUT请求参数：\(reqeust)")
     response.completed()
 }
 
 routes.add(method: .delete, uri: "/params") { (reqeust, response) in
-    let params = reqeust.params()
-    response.appendBody(string: "DELETE请求参数：\(reqeust.params())")
+    print("DELETE:\(reqeust.params())")
+    response.appendBody(string: "DELETE请求参数：\(reqeust)")
     response.completed()
 }
 
