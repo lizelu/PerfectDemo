@@ -5,6 +5,7 @@
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "0DB265A27CDDC64A18EA25283516A81AC9340CFA" : 9223372036854775807,
+    "52F974CF368298658E2D7486B02A88D6A4358B85" : 9223372036854775807,
     "0B9B07A57A7603A158703662ACDD6F3ABAA339F4" : 9223372036854775807,
     "C4127C9B9C8FDF608B532AD72407863CE2797629" : 9223372036854775807,
     "9197B75B1BC29921D6E3B1CCDC2B258350009F3A" : 9223372036854775807,
@@ -13,6 +14,7 @@
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E484372A-958B-477E-9544-73095BBA1006",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "0DB265A27CDDC64A18EA25283516A81AC9340CFA" : "PerfectDemo\/",
+    "52F974CF368298658E2D7486B02A88D6A4358B85" : "PerfectDemo\/Packages\/PerfectRequestLogger-0.2.0\/",
     "0B9B07A57A7603A158703662ACDD6F3ABAA339F4" : "..\/PerfectDemo\/PerfectTemplate",
     "C4127C9B9C8FDF608B532AD72407863CE2797629" : "PerfectDemo\/Packages\/PerfectHTTPServer-2.0.7\/",
     "9197B75B1BC29921D6E3B1CCDC2B258350009F3A" : "PerfectDemo\/Packages\/PerfectHTTP-2.0.6\/",
@@ -31,6 +33,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lizelu\/PerfectDemo.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0DB265A27CDDC64A18EA25283516A81AC9340CFA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dabfleming\/Perfect-RequestLogger.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "52F974CF368298658E2D7486B02A88D6A4358B85"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lizelu\/CollectionViewControllerDemo.git",

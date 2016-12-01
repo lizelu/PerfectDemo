@@ -31,7 +31,8 @@ class ViewController: UIViewController {
     @IBAction func tapRequestButton(_ sender: UIButton) {
         
         let method = requsetMethod(tag: sender.tag)
-        sessionDataTaskRequest(method: method, parameters: ["userName":"ZeluLi" as AnyObject])
+        let parameters = ["userName":"ZeluLi", "password":"qwert","Tel":"1234"]
+        sessionDataTaskRequest(method: method, parameters: parameters as [String:AnyObject])
     }
     
     func requsetMethod(tag: Int) -> String {
@@ -74,7 +75,6 @@ class ViewController: UIViewController {
         if method != "GET" {
             request.httpBody = escapeQueryString.data(using: String.Encoding.utf8)
         }
-        
         //3.获取Session单例，创建SessionDataTask
         let session: URLSession = URLSession.shared
         let sessionTask: URLSessionDataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) in
@@ -83,8 +83,10 @@ class ViewController: UIViewController {
             }
             
             if data != nil {    //对Data进行Json解析
-                let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
-                print(json!)
+                guard let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) else {
+                    return
+                }
+                print(json)
             }
         });
         sessionTask.resume()

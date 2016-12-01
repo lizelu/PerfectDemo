@@ -20,6 +20,7 @@
 import PerfectLib
 import PerfectHTTP
 import PerfectHTTPServer
+//import PerfectRequestLogger
 
 // Create HTTP server.
 let server = HTTPServer()
@@ -109,18 +110,22 @@ routes.add(method: .get, uri: "/cat", handler: {
 
 
 //MARK: - 获取请求参数:
-func convertJons(params: [(String, String)]) -> [String: Any] {
-    var jsonDic = [String: Any]()
-    for item in params{
+func convertJons(params: [(String, String)]) -> String{
+    var jsonDic:[String:String] = [:]
+    for item in params {
         jsonDic[item.0] = item.1
     }
-    return jsonDic
+    
+    guard let json = try? jsonDic.jsonEncodedString() else {
+        return ""
+    }
+    return json
 }
 
 func requestHandler(request: HTTPRequest, response:HTTPResponse) {
     print("\(request.method):\(request.params())")
     do {
-        try response.setBody(json: convertJons(params:request.params()))
+        try response.setBody(string: convertJons(params:request.params()))
     } catch {
         response.setBody(string: "Error")
     }
@@ -142,6 +147,44 @@ routes.add(method: .put, uri: "/params") { (request, response) in
 routes.add(method: .delete, uri: "/params") { (request, response) in
    requestHandler(request: request, response: response)
 }
+
+//MARK: - 文件上传
+// 创建路径用于存储已上传文件
+let fileDir = Dir(Dir.workingDir.path + "files")
+do {
+    try fileDir.create()
+} catch {
+    print(error)
+}
+routes.add(method: .post, uri: "/upload") { (request, response) in
+    // 通过操作fileUploads数组来掌握文件上传的情况
+    // 如果这个POST请求不是分段multi-part类型，则该数组内容为空
+    
+    if let uploads = request.postFileUploads, uploads.count > 0 {
+        // 创建一个字典数组用于检查已经上载的内容
+        var ary = [[String:Any]]()
+        
+        for upload in uploads {
+            ary.append([
+                "fieldName": upload.fieldName,  //字段名
+                "contentType": upload.contentType, //文件内容类型
+                "fileName": upload.fileName,    //文件名
+                "fileSize": upload.fileSize,    //文件尺寸
+                "tmpFileName": upload.tmpFileName   //上载后的临时文件名
+                ])
+            
+                // 将文件转移走，如果目标位置已经有同名文件则进行覆盖操作。
+                let thisFile = File(upload.tmpFileName)
+                do {
+                    let _ = try thisFile.moveTo(path: fileDir.path + upload.fileName, overWrite: true)
+                } catch {
+                    print(error)
+                }
+        }
+       print(ary)
+    }
+}
+
 
 
 
@@ -170,7 +213,7 @@ routes.add(method: .get, uri: "/redirect") { (reqeust, response) in
 
 
 
-//MARK: - 定制404页面风格
+//MARK: - 通过过滤器定制404页面风格
 struct Filter404: HTTPResponseFilter {
     func filterBody(response: HTTPResponse, callback: (HTTPResponseFilterResult) -> ()) {
         callback(.continue)
@@ -188,6 +231,11 @@ struct Filter404: HTTPResponseFilter {
     }
 }
 server.setResponseFilters([(Filter404(), .high)])
+
+
+
+//MARK: - 添加日志记录
+
 
 
 // Add the routes to the server.

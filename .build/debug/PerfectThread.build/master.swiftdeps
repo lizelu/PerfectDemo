@@ -1,6 +1,6 @@
 version: "Apple Swift version 3.0.1 (swiftlang-800.0.58.6 clang-800.0.42.1)"
-options: "e55df73d2af419e24ff827685bc67abe"
-build_time: [533716691, 860676000]
+options: "bce1aa65a595e70fd732432abc511095"
+build_time: [533900944, 798854000]
 inputs:
-  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectThread-2.0.3/Sources/Threading.swift": [533716658, 0]
-  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectThread-2.0.3/Sources/ThreadQueue.swift": [533716658, 0]
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/PerfectThread-2.0.3/Sources/Threading.swift": !dirty [533716658, 0]
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/PerfectThread-2.0.3/Sources/ThreadQueue.swift": !dirty [533716658, 0]
