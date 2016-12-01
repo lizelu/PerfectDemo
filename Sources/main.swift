@@ -20,7 +20,7 @@
 import PerfectLib
 import PerfectHTTP
 import PerfectHTTPServer
-//import PerfectRequestLogger
+import PerfectRequestLogger
 
 // Create HTTP server.
 let server = HTTPServer()
@@ -123,12 +123,7 @@ func convertJons(params: [(String, String)]) -> String{
 }
 
 func requestHandler(request: HTTPRequest, response:HTTPResponse) {
-    print("\(request.method):\(request.params())")
-    do {
-        try response.setBody(string: convertJons(params:request.params()))
-    } catch {
-        response.setBody(string: "Error")
-    }
+    response.setBody(string: convertJons(params:request.params()))
     response.completed()
 }
 
@@ -235,6 +230,22 @@ server.setResponseFilters([(Filter404(), .high)])
 
 
 //MARK: - 添加日志记录
+// 初始化一个日志记录器
+let myLogger = RequestLogger()
+
+// 增加过滤器
+// 首先增加高优先级的过滤器
+server.setRequestFilters([(myLogger, .high)])
+// 最后增加低优先级的过滤器
+server.setResponseFilters([(myLogger, .low)])
+
+Log.logger = SysLogger()//将日志输出到系统
+Log.debug(message: "程序第123行: value \(2)")
+Log.info(message: "程序第123行:")
+Log.warning(message: "调用错误句柄")
+Log.error(message: "满足错误条件")
+Log.critical(message: "发现异常：")
+//Log.terminal(message: "异常失控，服务终止。")
 
 
 
