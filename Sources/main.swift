@@ -21,6 +21,7 @@ import PerfectLib
 import PerfectHTTP
 import PerfectHTTPServer
 import PerfectRequestLogger
+import PerfectLogger
 
 // Create HTTP server.
 let server = HTTPServer()
@@ -119,6 +120,7 @@ func convertJons(params: [(String, String)]) -> String{
     guard let json = try? jsonDic.jsonEncodedString() else {
         return ""
     }
+    LogFile.debug(json)
     return json
 }
 
@@ -229,24 +231,19 @@ server.setResponseFilters([(Filter404(), .high)])
 
 
 
-//MARK: - 添加日志记录
-// 初始化一个日志记录器
-let myLogger = RequestLogger()
+//MARK: - 添加日志文件记录
+LogFile.location = "./files/logs/myLog.log"     //设置日志文件路径
+// 增加日志过滤器，将日志写入相应的文件
+server.setRequestFilters([(RequestLogger(), .high)])    // 首先增加高优先级的过滤器
+server.setResponseFilters([(RequestLogger(), .low)])    // 最后增加低优先级的过滤器
 
-// 增加过滤器
-// 首先增加高优先级的过滤器
-server.setRequestFilters([(myLogger, .high)])
-// 最后增加低优先级的过滤器
-server.setResponseFilters([(myLogger, .low)])
-
-Log.logger = SysLogger()//将日志输出到系统
-Log.debug(message: "程序第123行: value \(2)")
-Log.info(message: "程序第123行:")
-Log.warning(message: "调用错误句柄")
-Log.error(message: "满足错误条件")
-Log.critical(message: "发现异常：")
-//Log.terminal(message: "异常失控，服务终止。")
-
+//MARK: -
+LogFile.debug("调试")
+LogFile.info("消息")
+LogFile.warning("警告")
+LogFile.error("出错")
+LogFile.critical("严重错误")
+//LogFile.terminal("服务器终止")
 
 
 // Add the routes to the server.

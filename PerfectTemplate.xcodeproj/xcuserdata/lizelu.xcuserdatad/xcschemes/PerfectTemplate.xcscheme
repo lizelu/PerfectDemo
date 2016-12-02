@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_1538"
+               BlueprintIdentifier = "OBJ_1598"
                BuildableName = "PerfectTemplate"
                BlueprintName = "PerfectTemplate"
                ReferencedContainer = "container:PerfectTemplate.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "OBJ_1538"
+            BlueprintIdentifier = "OBJ_1598"
             BuildableName = "PerfectTemplate"
             BlueprintName = "PerfectTemplate"
             ReferencedContainer = "container:PerfectTemplate.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "OBJ_1538"
+            BlueprintIdentifier = "OBJ_1598"
             BuildableName = "PerfectTemplate"
             BlueprintName = "PerfectTemplate"
             ReferencedContainer = "container:PerfectTemplate.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "OBJ_1538"
+            BlueprintIdentifier = "OBJ_1598"
             BuildableName = "PerfectTemplate"
             BlueprintName = "PerfectTemplate"
             ReferencedContainer = "container:PerfectTemplate.xcodeproj">
