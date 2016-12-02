@@ -1,0 +1,41 @@
+{
+  "": {
+    "swift-dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.build/master.swiftdeps"
+  },
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/SwiftMoment-0.9.1/Sources/SwiftMoment/Duration.swift": {
+    "dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.build/Duration.d",
+    "object": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.build/Duration.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.build/Duration~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.build/Duration.swiftdeps"
+  },
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/SwiftMoment-0.9.1/Sources/SwiftMoment/Extensions.swift": {
+    "dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.build/Extensions.d",
+    "object": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.build/Extensions.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.build/Extensions~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.build/Extensions.swiftdeps"
+  },
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/SwiftMoment-0.9.1/Sources/SwiftMoment/Moment.swift": {
+    "dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.build/Moment.d",
+    "object": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.build/Moment.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.build/Moment~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.build/Moment.swiftdeps"
+  },
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/SwiftMoment-0.9.1/Sources/SwiftMoment/MomentFromNow.swift": {
+    "dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.build/MomentFromNow.d",
+    "object": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.build/MomentFromNow.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.build/MomentFromNow~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.build/MomentFromNow.swiftdeps"
+  },
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/SwiftMoment-0.9.1/Sources/SwiftMoment/Operators.swift": {
+    "dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.build/Operators.d",
+    "object": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.build/Operators.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.build/Operators~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.build/Operators.swiftdeps"
+  },
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/SwiftMoment-0.9.1/Sources/SwiftMoment/TimeUnit.swift": {
+    "dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.build/TimeUnit.d",
+    "object": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.build/TimeUnit.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.build/TimeUnit~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.build/TimeUnit.swiftdeps"
+  }
+}

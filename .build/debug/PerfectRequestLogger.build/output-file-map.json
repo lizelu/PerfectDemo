@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectRequestLogger.build/master.swiftdeps"
+  },
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/PerfectRequestLogger-0.2.0/Sources/PerfectRequestLogger.swift": {
+    "dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectRequestLogger.build/PerfectRequestLogger.d",
+    "object": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectRequestLogger.build/PerfectRequestLogger.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectRequestLogger.build/PerfectRequestLogger~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectRequestLogger.build/PerfectRequestLogger.swiftdeps"
+  }
+}

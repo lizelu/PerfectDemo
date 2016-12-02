@@ -1,17 +1,23 @@
 {
   "": {
-    "swift-dependencies": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectTemplate.build/master.swiftdeps"
+    "swift-dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectTemplate.build/master.swiftdeps"
   },
-  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Sources/arguments.swift": {
-    "dependencies": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectTemplate.build/arguments.d",
-    "object": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectTemplate.build/arguments.swift.o",
-    "swiftmodule": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectTemplate.build/arguments~partial.swiftmodule",
-    "swift-dependencies": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectTemplate.build/arguments.swiftdeps"
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Sources/arguments.swift": {
+    "dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectTemplate.build/arguments.d",
+    "object": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectTemplate.build/arguments.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectTemplate.build/arguments~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectTemplate.build/arguments.swiftdeps"
   },
-  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Sources/main.swift": {
-    "dependencies": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectTemplate.build/main.d",
-    "object": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectTemplate.build/main.swift.o",
-    "swiftmodule": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectTemplate.build/main~partial.swiftmodule",
-    "swift-dependencies": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectTemplate.build/main.swiftdeps"
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Sources/DataBaseOperator.swift": {
+    "dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectTemplate.build/DataBaseOperator.d",
+    "object": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectTemplate.build/DataBaseOperator.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectTemplate.build/DataBaseOperator~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectTemplate.build/DataBaseOperator.swiftdeps"
+  },
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Sources/main.swift": {
+    "dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectTemplate.build/main.d",
+    "object": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectTemplate.build/main.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectTemplate.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectTemplate.build/main.swiftdeps"
   }
 }

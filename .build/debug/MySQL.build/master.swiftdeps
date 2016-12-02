@@ -1,0 +1,5 @@
+version: "Apple Swift version 3.0.1 (swiftlang-800.0.58.6 clang-800.0.42.1)"
+options: "0e5288b57726263a264dff808e4add09"
+build_time: [533982953, 490076000]
+inputs:
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/MySQL-2.0.4/Sources/MySQL/MySQL.swift": [533975932, 0]

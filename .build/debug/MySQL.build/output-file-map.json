@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/MySQL.build/master.swiftdeps"
+  },
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/MySQL-2.0.4/Sources/MySQL/MySQL.swift": {
+    "dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/MySQL.build/MySQL.d",
+    "object": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/MySQL.build/MySQL.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/MySQL.build/MySQL~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/MySQL.build/MySQL.swiftdeps"
+  }
+}

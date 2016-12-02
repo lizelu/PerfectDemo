@@ -1,0 +1,10 @@
+version: "Apple Swift version 3.0.1 (swiftlang-800.0.58.6 clang-800.0.42.1)"
+options: "9127ce37c8d0d1d661763f24b9279119"
+build_time: [533977206, 852441000]
+inputs:
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/SwiftMoment-0.9.1/Sources/SwiftMoment/Duration.swift": [533959732, 0]
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/SwiftMoment-0.9.1/Sources/SwiftMoment/Extensions.swift": [533959732, 0]
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/SwiftMoment-0.9.1/Sources/SwiftMoment/Moment.swift": [533959732, 0]
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/SwiftMoment-0.9.1/Sources/SwiftMoment/MomentFromNow.swift": [533959732, 0]
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/SwiftMoment-0.9.1/Sources/SwiftMoment/Operators.swift": [533959732, 0]
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/SwiftMoment-0.9.1/Sources/SwiftMoment/TimeUnit.swift": [533959732, 0]

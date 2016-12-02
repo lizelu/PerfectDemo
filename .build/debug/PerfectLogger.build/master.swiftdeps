@@ -1,0 +1,5 @@
+version: "Apple Swift version 3.0.1 (swiftlang-800.0.58.6 clang-800.0.42.1)"
+options: "f1fde1752d9eb9602125fbfa1d8a9c4b"
+build_time: [533977213, 247209000]
+inputs:
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/PerfectLogger-0.0.7/Sources/Perfect_Logger.swift": [533963940, 0]

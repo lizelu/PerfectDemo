@@ -1,35 +1,35 @@
 {
   "": {
-    "swift-dependencies": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectNet.build/master.swiftdeps"
+    "swift-dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectNet.build/master.swiftdeps"
   },
-  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectNet-2.0.5/Sources/Net.swift": {
-    "dependencies": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectNet.build/Net.d",
-    "object": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectNet.build/Net.swift.o",
-    "swiftmodule": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectNet.build/Net~partial.swiftmodule",
-    "swift-dependencies": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectNet.build/Net.swiftdeps"
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/PerfectNet-2.0.5/Sources/Net.swift": {
+    "dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectNet.build/Net.d",
+    "object": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectNet.build/Net.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectNet.build/Net~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectNet.build/Net.swiftdeps"
   },
-  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectNet-2.0.5/Sources/NetEvent.swift": {
-    "dependencies": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectNet.build/NetEvent.d",
-    "object": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectNet.build/NetEvent.swift.o",
-    "swiftmodule": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectNet.build/NetEvent~partial.swiftmodule",
-    "swift-dependencies": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectNet.build/NetEvent.swiftdeps"
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/PerfectNet-2.0.5/Sources/NetEvent.swift": {
+    "dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectNet.build/NetEvent.d",
+    "object": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectNet.build/NetEvent.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectNet.build/NetEvent~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectNet.build/NetEvent.swiftdeps"
   },
-  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectNet-2.0.5/Sources/NetNamedPipe.swift": {
-    "dependencies": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectNet.build/NetNamedPipe.d",
-    "object": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectNet.build/NetNamedPipe.swift.o",
-    "swiftmodule": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectNet.build/NetNamedPipe~partial.swiftmodule",
-    "swift-dependencies": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectNet.build/NetNamedPipe.swiftdeps"
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/PerfectNet-2.0.5/Sources/NetNamedPipe.swift": {
+    "dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectNet.build/NetNamedPipe.d",
+    "object": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectNet.build/NetNamedPipe.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectNet.build/NetNamedPipe~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectNet.build/NetNamedPipe.swiftdeps"
   },
-  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectNet-2.0.5/Sources/NetTCP.swift": {
-    "dependencies": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectNet.build/NetTCP.d",
-    "object": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectNet.build/NetTCP.swift.o",
-    "swiftmodule": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectNet.build/NetTCP~partial.swiftmodule",
-    "swift-dependencies": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectNet.build/NetTCP.swiftdeps"
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/PerfectNet-2.0.5/Sources/NetTCP.swift": {
+    "dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectNet.build/NetTCP.d",
+    "object": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectNet.build/NetTCP.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectNet.build/NetTCP~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectNet.build/NetTCP.swiftdeps"
   },
-  "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/Packages/PerfectNet-2.0.5/Sources/NetTCPSSL.swift": {
-    "dependencies": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectNet.build/NetTCPSSL.d",
-    "object": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectNet.build/NetTCPSSL.swift.o",
-    "swiftmodule": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectNet.build/NetTCPSSL~partial.swiftmodule",
-    "swift-dependencies": "/Users/lizelu/Documents/PerfectDemo/PerfectTemplate/.build/debug/PerfectNet.build/NetTCPSSL.swiftdeps"
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/PerfectNet-2.0.5/Sources/NetTCPSSL.swift": {
+    "dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectNet.build/NetTCPSSL.d",
+    "object": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectNet.build/NetTCPSSL.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectNet.build/NetTCPSSL~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectNet.build/NetTCPSSL.swiftdeps"
   }
 }

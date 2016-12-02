@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectLogger.build/master.swiftdeps"
+  },
+  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/PerfectLogger-0.0.7/Sources/Perfect_Logger.swift": {
+    "dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectLogger.build/Perfect_Logger.d",
+    "object": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectLogger.build/Perfect_Logger.swift.o",
+    "swiftmodule": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectLogger.build/Perfect_Logger~partial.swiftmodule",
+    "swift-dependencies": "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectLogger.build/Perfect_Logger.swiftdeps"
+  }
+}

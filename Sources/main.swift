@@ -22,6 +22,7 @@ import PerfectHTTP
 import PerfectHTTPServer
 import PerfectRequestLogger
 import PerfectLogger
+import MySQL
 
 // Create HTTP server.
 let server = HTTPServer()
@@ -183,8 +184,6 @@ routes.add(method: .post, uri: "/upload") { (request, response) in
 }
 
 
-
-
 //MARK: - 返回Json数据
 routes.add(method: .get, uri: "/json") { (reqeust, response) in
     let dic: [String : Any] = ["key1": "value1",
@@ -237,13 +236,14 @@ LogFile.location = "./files/logs/myLog.log"     //设置日志文件路径
 server.setRequestFilters([(RequestLogger(), .high)])    // 首先增加高优先级的过滤器
 server.setResponseFilters([(RequestLogger(), .low)])    // 最后增加低优先级的过滤器
 
-//MARK: -
 LogFile.debug("调试")
 LogFile.info("消息")
 LogFile.warning("警告")
 LogFile.error("出错")
 LogFile.critical("严重错误")
 //LogFile.terminal("服务器终止")
+
+let handle = MySQLConnect.shareInstance(dataBaseName: "perfect_note")
 
 
 // Add the routes to the server.
@@ -268,3 +268,5 @@ do {
 } catch PerfectError.networkError(let err, let msg) {
 	print("Network error thrown: \(err) \(msg)")
 }
+
+
