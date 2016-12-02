@@ -135,6 +135,8 @@ routes.add(method: .get, uri: "/params") { (request, response) in
 }
 
 routes.add(method: .post, uri: "/params") { (request, response) in
+    let user = PerfectNoteOperator()
+    user.insertUserInfo(userName: "lizelu", password: "1234")
    requestHandler(request: request, response: response)
 }
 
