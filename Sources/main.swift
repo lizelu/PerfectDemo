@@ -130,21 +130,29 @@ func requestHandler(request: HTTPRequest, response:HTTPResponse) {
     response.completed()
 }
 
-routes.add(method: .get, uri: "/params") { (request, response) in
-    let user = PerfectNoteOperator()
-    user.insertUserInfo(userName: "lizelu", password: "1234")
-    requestHandler(request: request, response: response)
+routes.add(method: .get, uri: "/user") { (request, response) in
+    guard let userName: String = request.param(name: "userName") else {
+        LogFile.error("userName为nil")
+        return
+    }
+    guard let json = UserOperator().queryUserInfo(userName: userName) else {
+        LogFile.error("josn为nil")
+        return
+    }
+    response.setBody(string: json)
+    response.completed()
 }
 
-routes.add(method: .post, uri: "/params") { (request, response) in
+routes.add(method: .post, uri: "/user") { (request, response) in
+//    PerfectNoteOperator().insertUserInfo(userName: "lizelu", password: "1234")
    requestHandler(request: request, response: response)
 }
 
-routes.add(method: .put, uri: "/params") { (request, response) in
+routes.add(method: .put, uri: "/user") { (request, response) in
     requestHandler(request: request, response: response)
 }
 
-routes.add(method: .delete, uri: "/params") { (request, response) in
+routes.add(method: .delete, uri: "/user") { (request, response) in
    requestHandler(request: request, response: response)
 }
 

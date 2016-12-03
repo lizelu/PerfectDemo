@@ -28,6 +28,18 @@ class LoginOrRegisterViewController: UIViewController {
             Tools.showTap(message: "请输入用户名", superVC: self)
             return
         }
+        let userInfoReq = UserInfoRequest(start: { 
+            
+        }, success: { (userModel) in
+            guard let model = userModel as? UserModel else {
+                return
+            }
+            print(model.userId)
+        }) { (errorMessage) in
+            Tools.showTap(message: errorMessage, superVC: self)
+        }
+        
+        userInfoReq.queryUserInfo(userName: userNameTextField.text!)
     }
 
     @IBAction func tapGestureRecongnizer(_ sender: UITapGestureRecognizer) {

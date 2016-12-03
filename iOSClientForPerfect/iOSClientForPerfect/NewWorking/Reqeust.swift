@@ -7,26 +7,85 @@
 //
 
 import Foundation
-class Reqest {
+typealias RequestStart = () -> Void
+typealias RequestSuccess = (Any) -> Void
+typealias RequestFailed = (String) -> Void
+
+enum RequestMethodTypes {
+    case GET,
+    POST,
+    PUT,
+    DELETE,
+    CUSTOM(String)
+    /// Convert to String
+    public var description: String {
+        switch self {
+        case .GET: return "GET"
+        case .POST: return "POST"
+        case .PUT: return "PUT"
+        case .DELETE: return "DELETE"
+        case .CUSTOM(let s): return s
+        }
+    }
+}
+
+class BaseRequest {
+    var start: RequestStart
+    var success: RequestSuccess
+    var faile: RequestFailed
+    
+    init(start: @escaping RequestStart,
+         success: @escaping RequestSuccess,
+         faile: @escaping RequestFailed) {
+        self.start = start
+        self.success = success
+        self.faile = faile
+    }
+
+}
+
+class Request: BaseRequest {
+    func getRequest(path:String,
+                    parameters:[String:String]) {
+        self.sessionDataTaskRequest(method: .GET, path: path, parameters: parameters)
+    }
+    
+    func postRequest(path:String,
+                     parameters:[String:String]) {
+        self.sessionDataTaskRequest(method: .POST, path: path, parameters: parameters)
+    }
+    
+    func putRequest(path:String,
+                    parameters:[String:String]) {
+        self.sessionDataTaskRequest(method: .PUT, path: path, parameters: parameters)
+    }
+    
+    func deleteRequest(path:String,
+                    parameters:[String:String]) {
+        self.sessionDataTaskRequest(method: .DELETE, path: path, parameters: parameters)
+    }
+    
     /**
      NSURLSessionDataTask
      - parameter method:     请求方式：POST或者GET
      - parameter parameters: 字典形式的参数
      */
     
-    func sessionDataTaskRequest(method: String, parameters:[String:AnyObject]){
+    func sessionDataTaskRequest(method: RequestMethodTypes, path: String, parameters:[String:String]){
         //1.创建会话用的URL
-        var hostString = "http://127.0.0.1:8181/params"
+        var hostString = path//"http://127.0.0.1:8181/params"
         let escapeQueryString = query(parameters)   //对参数进行URL编码
-        if method == "GET" {
+        if method.description == "GET" {
             hostString += "?" + escapeQueryString
         }
         let url: URL = URL(string: hostString)!
-        
+        print("请求URL：\(hostString)")
+        print("请求方法：\(method)")
+        print("请求参数：\(parameters)")
         //2.创建Request
         let request: NSMutableURLRequest = NSMutableURLRequest.init(url: url)
-        request.httpMethod = method //指定请求方式
-        if method != "GET" {
+        request.httpMethod = method.description //指定请求方式
+        if method.description != "GET" {
             request.httpBody = escapeQueryString.data(using: String.Encoding.utf8)
         }
         //3.获取Session单例，创建SessionDataTask
@@ -41,6 +100,7 @@ class Reqest {
                     return
                 }
                 print(json)
+                self.success(json)
             }
         });
         sessionTask.resume()
