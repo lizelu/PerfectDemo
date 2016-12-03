@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="54i-kd-TtG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -58,6 +58,87 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-604" y="79"/>
+        </scene>
+        <!--登录或注册-->
+        <scene sceneID="Zaz-L9-Kov">
+            <objects>
+                <viewController storyboardIdentifier="LoginOrRegisterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eev-h9-1U3" customClass="LoginOrRegisterViewController" customModule="iOSClientForPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PrG-HU-l7f"/>
+                        <viewControllerLayoutGuide type="bottom" id="5n2-2L-lOD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8uB-sS-kwg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UOG-dU-PHe">
+                                <rect key="frame" x="15" y="102" width="345" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="tOL-11-Hnb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDW-t7-UYC">
+                                <rect key="frame" x="113" y="165" width="149" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="149" id="Ngh-wE-i2T"/>
+                                    <constraint firstAttribute="height" constant="30" id="Tca-qN-3QO"/>
+                                </constraints>
+                                <state key="normal" title="下一步">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapNextStepButton:" destination="eev-h9-1U3" eventType="touchUpInside" id="eix-kh-vaT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UOG-dU-PHe" secondAttribute="trailing" constant="15" id="3cj-7n-vM8"/>
+                            <constraint firstItem="UOG-dU-PHe" firstAttribute="leading" secondItem="8uB-sS-kwg" secondAttribute="leading" constant="15" id="GKM-5p-e25"/>
+                            <constraint firstItem="TDW-t7-UYC" firstAttribute="top" secondItem="UOG-dU-PHe" secondAttribute="bottom" constant="33" id="Pbe-dj-I5f"/>
+                            <constraint firstItem="UOG-dU-PHe" firstAttribute="top" secondItem="PrG-HU-l7f" secondAttribute="bottom" constant="38" id="bsx-It-NnZ"/>
+                            <constraint firstItem="TDW-t7-UYC" firstAttribute="centerX" secondItem="8uB-sS-kwg" secondAttribute="centerX" id="cPi-Cz-k1L"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="TTB-yf-Cwl" appends="YES" id="Qhd-qj-7xd"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="登录或注册" id="RBL-oD-d8z"/>
+                    <connections>
+                        <outlet property="userNameTextField" destination="UOG-dU-PHe" id="Sae-sn-1ap"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BbQ-xU-TE0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="TTB-yf-Cwl">
+                    <connections>
+                        <action selector="tapGestureRecongnizer:" destination="eev-h9-1U3" id="XMl-Hp-hrj"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1200.8" y="78.710644677661179"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uvo-J6-quU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="54i-kd-TtG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aX7-hV-EdD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eev-h9-1U3" kind="relationship" relationship="rootViewController" id="21b-ff-aOO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lXY-Zl-uTH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="261.60000000000002" y="78.710644677661179"/>
         </scene>
     </scenes>
 </document>

@@ -131,12 +131,12 @@ func requestHandler(request: HTTPRequest, response:HTTPResponse) {
 }
 
 routes.add(method: .get, uri: "/params") { (request, response) in
+    let user = PerfectNoteOperator()
+    user.insertUserInfo(userName: "lizelu", password: "1234")
     requestHandler(request: request, response: response)
 }
 
 routes.add(method: .post, uri: "/params") { (request, response) in
-    let user = PerfectNoteOperator()
-    user.insertUserInfo(userName: "lizelu", password: "1234")
    requestHandler(request: request, response: response)
 }
 
@@ -245,7 +245,7 @@ LogFile.error("出错")
 LogFile.critical("严重错误")
 //LogFile.terminal("服务器终止")
 
-let handle = MySQLConnect.shareInstance(dataBaseName: "perfect_note")
+//let handle = MySQLConnect.shareInstance(dataBaseName: "perfect_note")
 
 
 // Add the routes to the server.

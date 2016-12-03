@@ -21,12 +21,12 @@ class PerfectNoteOperator {
     
     //MARK: - Operator User Table
     func insertUserInfo(userName: String, password: String) {
-        let values = "('\(userName)', '\(password)', '\(Date())')"
-        let statement = "insert into \(userTableName) (username, password, register_date) values \(values)"
+        let values = "('\(userName)', '\(password)')"
+        let statement = "insert into \(userTableName) (username, password) values \(values)"
         LogFile.info("执行SQL:\(statement)")
         
         guard mysql.query(statement: statement) else {
-            LogFile.error("\(statement)执行失败")
+            LogFile.error("\(statement)插入失败")
             return
         }
         
