@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F48676371DF2CE3800078859 /* LoginOrRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48676361DF2CE3800078859 /* LoginOrRegisterViewController.swift */; };
+		F48676371DF2CE3800078859 /* InputUserNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48676361DF2CE3800078859 /* InputUserNameController.swift */; };
 		F48676391DF2D11A00078859 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48676381DF2D11A00078859 /* ViewController.swift */; };
 		F486763C1DF2D14D00078859 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486763B1DF2D14D00078859 /* Tools.swift */; };
 		F486763E1DF2D38400078859 /* Reqeust.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486763D1DF2D38400078859 /* Reqeust.swift */; };
@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F48676361DF2CE3800078859 /* LoginOrRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginOrRegisterViewController.swift; sourceTree = "<group>"; };
+		F48676361DF2CE3800078859 /* InputUserNameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputUserNameController.swift; sourceTree = "<group>"; };
 		F48676381DF2D11A00078859 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F486763B1DF2D14D00078859 /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		F486763D1DF2D38400078859 /* Reqeust.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reqeust.swift; sourceTree = "<group>"; };
@@ -51,7 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				F48676381DF2D11A00078859 /* ViewController.swift */,
-				F48676361DF2CE3800078859 /* LoginOrRegisterViewController.swift */,
+				F48676361DF2CE3800078859 /* InputUserNameController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -192,7 +192,7 @@
 				F48676451DF2F8F000078859 /* UserModel.swift in Sources */,
 				F48676421DF2F82E00078859 /* RequestPathDefine.swift in Sources */,
 				F486763E1DF2D38400078859 /* Reqeust.swift in Sources */,
-				F48676371DF2CE3800078859 /* LoginOrRegisterViewController.swift in Sources */,
+				F48676371DF2CE3800078859 /* InputUserNameController.swift in Sources */,
 				F4E7C20E1DEEC880009CD13C /* AppDelegate.swift in Sources */,
 				F486763C1DF2D14D00078859 /* Tools.swift in Sources */,
 			);

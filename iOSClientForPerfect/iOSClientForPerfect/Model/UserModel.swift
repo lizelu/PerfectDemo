@@ -10,5 +10,6 @@ import Foundation
 class UserModel {
     public var userId: String = ""
     public var userName: String = ""
+    public var password: String = ""
     public var regestTime: String = ""
 }

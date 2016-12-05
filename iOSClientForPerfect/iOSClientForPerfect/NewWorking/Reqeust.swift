@@ -7,6 +7,12 @@
 //
 
 import Foundation
+let RequestResultSuccess: String = "SUCCESS"
+let RequestResultFaile: String = "FAILE"
+let ResultListKey = "list"
+let ResultKey = "result"
+let ErrorMessageKey = "errorMessage"
+
 typealias RequestStart = () -> Void
 typealias RequestSuccess = (Any) -> Void
 typealias RequestFailed = (String) -> Void
@@ -99,8 +105,30 @@ class Request: BaseRequest {
                 guard let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) else {
                     return
                 }
-                print(json)
-                self.success(json)
+                print("响应报文：")
+                guard let jsonDic = json as? [String: Any] else {
+                    return
+                }
+                
+                guard let result = jsonDic[ResultKey] as? String else {
+                    return
+                }
+                
+                //请求成功
+                if result == RequestResultSuccess {
+                    print(jsonDic)
+                    self.success(jsonDic)
+                    return
+                }
+                
+                //逻辑失败
+                if result == RequestResultFaile {
+                    guard let errorMessage = jsonDic[ErrorMessageKey] as? String else {
+                        return
+                    }
+                    self.faile(errorMessage)
+                    return
+                }
             }
         });
         sessionTask.resume()

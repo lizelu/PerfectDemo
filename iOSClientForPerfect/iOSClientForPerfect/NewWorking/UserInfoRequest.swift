@@ -14,18 +14,22 @@ class UserInfoRequest: BaseRequest {
         let request = Request(start: { 
             self.start()
         }, success: { (json) in
-            guard let userInfos = json as? [[String: String]] else {
+            guard let userInfos = json as? [String: Any] else {
                 return
             }
             
             let userModel: UserModel = UserModel()
             
-            if !userInfos.isEmpty {
-                guard let userInfo = userInfos.first else {
+            if userInfos["list"] != nil {
+                guard let userInfo = userInfos["list"]! as? [String:String] else {
                     return
                 }
                 
                 userModel.userId = userInfo["userId"] ?? ""
+                userModel.userName = userInfo["userName"] ?? ""
+                userModel.password = userInfo["password"] ?? ""
+                userModel.regestTime = userInfo["registerTime"] ?? ""
+                
             }
             
             self.success(userModel)

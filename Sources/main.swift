@@ -140,6 +140,7 @@ routes.add(method: .get, uri: "/user") { (request, response) in
         LogFile.error("josn为nil")
         return
     }
+    LogFile.info(json)
     response.setBody(string: json)
     response.completed()
 }
@@ -158,6 +159,7 @@ routes.add(method: .post, uri: "/user") { (request, response) in
         LogFile.error("josn为nil")
         return
     }
+    LogFile.info(json)
     response.setBody(string: json)
     response.completed()
 }
@@ -260,15 +262,12 @@ LogFile.location = "./files/logs/myLog.log"     //设置日志文件路径
 server.setRequestFilters([(RequestLogger(), .high)])    // 首先增加高优先级的过滤器
 server.setResponseFilters([(RequestLogger(), .low)])    // 最后增加低优先级的过滤器
 
-LogFile.debug("调试")
-LogFile.info("消息")
-LogFile.warning("警告")
-LogFile.error("出错")
-LogFile.critical("严重错误")
+//LogFile.debug("调试")
+//LogFile.info("消息")
+//LogFile.warning("警告")
+//LogFile.error("出错")
+//LogFile.critical("严重错误")
 //LogFile.terminal("服务器终止")
-
-//let handle = MySQLConnect.shareInstance(dataBaseName: "perfect_note")
-
 
 // Add the routes to the server.
 server.addRoutes(routes)

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginOrRegisterViewController: UIViewController {
+class InputUserNameController: UIViewController {
 
     @IBOutlet var userNameTextField: UITextField!
     
@@ -28,6 +28,7 @@ class LoginOrRegisterViewController: UIViewController {
             Tools.showTap(message: "请输入用户名", superVC: self)
             return
         }
+        
         let userInfoReq = UserInfoRequest(start: { 
             
         }, success: { (userModel) in
@@ -35,6 +36,7 @@ class LoginOrRegisterViewController: UIViewController {
                 return
             }
             print(model.userId)
+            
         }) { (errorMessage) in
             Tools.showTap(message: errorMessage, superVC: self)
         }
@@ -45,14 +47,4 @@ class LoginOrRegisterViewController: UIViewController {
     @IBAction func tapGestureRecongnizer(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
