@@ -130,6 +130,7 @@ func requestHandler(request: HTTPRequest, response:HTTPResponse) {
     response.completed()
 }
 
+//根据用户名查询用户ID
 routes.add(method: .get, uri: "/user") { (request, response) in
     guard let userName: String = request.param(name: "userName") else {
         LogFile.error("userName为nil")
@@ -144,8 +145,21 @@ routes.add(method: .get, uri: "/user") { (request, response) in
 }
 
 routes.add(method: .post, uri: "/user") { (request, response) in
-//    PerfectNoteOperator().insertUserInfo(userName: "lizelu", password: "1234")
-   requestHandler(request: request, response: response)
+    guard let userName: String = request.param(name: "userName") else {
+        LogFile.error("userName为nil")
+        return
+    }
+    
+    guard let password: String = request.param(name: "password") else {
+        LogFile.error("password为nil")
+        return
+    }
+    guard let json = UserOperator().insertUserInfo(userName: userName, password: password) else {
+        LogFile.error("josn为nil")
+        return
+    }
+    response.setBody(string: json)
+    response.completed()
 }
 
 routes.add(method: .put, uri: "/user") { (request, response) in
