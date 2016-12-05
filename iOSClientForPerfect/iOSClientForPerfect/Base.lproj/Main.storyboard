@@ -73,7 +73,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UOG-dU-PHe">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入用户名" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="UOG-dU-PHe">
                                 <rect key="frame" x="50" y="255" width="275" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="tOL-11-Hnb"/>
@@ -147,13 +147,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D69-Ju-eJQ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入用户名" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="D69-Ju-eJQ">
                                 <rect key="frame" x="50" y="259" width="275" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="af3-PM-RuQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZu-tl-zfh">
                                 <rect key="frame" x="113" y="322" width="149" height="30"/>
@@ -199,6 +199,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.87058823529999996" green="0.57254901960000004" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="rZu-tl-zfh" firstAttribute="top" secondItem="D69-Ju-eJQ" secondAttribute="bottom" constant="33" id="5W9-Ik-7Z1"/>
                             <constraint firstItem="rZu-tl-zfh" firstAttribute="centerX" secondItem="D69-Ju-eJQ" secondAttribute="centerX" id="8WM-aq-wGS"/>
@@ -214,6 +215,9 @@
                             <constraint firstItem="3qv-hu-Xax" firstAttribute="leading" secondItem="exV-uZ-fWd" secondAttribute="trailing" constant="8" id="fVX-NL-Ydh"/>
                             <constraint firstItem="D69-Ju-eJQ" firstAttribute="leading" secondItem="aIB-Ge-q4V" secondAttribute="leading" constant="50" id="nel-FH-GU0"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="8Ab-LZ-CSK" appends="YES" id="2eA-Qo-UKi"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="loginOrRegisterButton" destination="rZu-tl-zfh" id="nKz-6U-KPR"/>
@@ -222,6 +226,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g1A-hT-REX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="8Ab-LZ-CSK">
+                    <connections>
+                        <action selector="tapGestrueRecognizer:" destination="Ou9-mL-D7v" id="Zrh-VK-FUo"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1900" y="79.610194902548727"/>
         </scene>

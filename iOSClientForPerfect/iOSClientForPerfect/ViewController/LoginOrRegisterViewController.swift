@@ -81,6 +81,9 @@ class LoginOrRegisterViewController: UIViewController {
         
     }
     
+    @IBAction func tapGestrueRecognizer(_ sender: Any) {
+        self.view.endEditing(true)
+    }
     func register() {
         let userInfoReq = UserInfoRequest(start: {
             
