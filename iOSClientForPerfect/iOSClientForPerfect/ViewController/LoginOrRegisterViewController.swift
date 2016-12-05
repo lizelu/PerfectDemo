@@ -60,6 +60,11 @@ class LoginOrRegisterViewController: UIViewController {
            // self.loginOrRegisterButton.setTitle(self.vcType.description(), for: .normal)
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.passwordTextField.becomeFirstResponder()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
