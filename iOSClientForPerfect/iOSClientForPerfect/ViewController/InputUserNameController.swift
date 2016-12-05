@@ -24,13 +24,13 @@ class InputUserNameController: UIViewController {
     }
     
     @IBAction func tapNextStepButton(_ sender: UIButton) {
-        if userNameTextField.text == "" {
+        if userNameTextField.text! == "" {
             Tools.showTap(message: "请输入用户名", superVC: self)
             return
         }
         
-        let userInfoReq = UserInfoRequest(start: { 
-            
+        let userInfoReq = UserInfoRequest(start: {
+
         }, success: { (userModel) in
             DispatchQueue.main.async {
                 self.goLoginOrRegister(userModel: userModel)

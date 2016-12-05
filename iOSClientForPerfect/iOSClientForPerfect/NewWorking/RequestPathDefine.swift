@@ -8,4 +8,6 @@
 
 import Foundation
 let RequestHome = "http://127.0.0.1:8181"
-let RequestUserInfoPath = "/user"
+let RequestUserInfoPath = "/queryUserInfoByUserName"
+let RequestUserLogin = "/login"
+let RequestUserRegister = "/register"

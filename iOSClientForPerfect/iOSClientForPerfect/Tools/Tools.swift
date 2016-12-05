@@ -9,7 +9,7 @@
 import UIKit
 class Tools: NSObject {
     static func showTap(message: String, superVC: UIViewController) {
-        let alter = UIAlertView(title: message, message: nil, delegate: nil, cancelButtonTitle: "OK")
+        let alter = UIAlertView(title: "提示", message: message, delegate: nil, cancelButtonTitle: "OK")
         alter.show()
     }
 }

@@ -9,7 +9,9 @@
 import UIKit
 
 enum VCType {
-    case Login, Register
+    case Login
+    case Register
+    
     public func description() -> String {
         switch self {
         case .Login:
@@ -32,7 +34,7 @@ enum VCType {
 class LoginOrRegisterViewController: UIViewController {
 
     var userInfo: UserModel!
-    var vcType: VCType!
+    var vcType: VCType = .Login
     
     @IBOutlet var userNameLabel: UILabel!
     @IBOutlet var loginOrRegisterButton: UIButton!
@@ -64,7 +66,60 @@ class LoginOrRegisterViewController: UIViewController {
     }
     
     @IBAction func tapLoginOrRegisterButton(_ sender: UIButton) {
+        if passwordTextField.text! == "" {
+            Tools.showTap(message: "请输入密码", superVC: self)
+            return
+        }
+        
+        switch vcType {
+        case .Login:
+            self.login()
+            
+        case .Register:
+            self.register()
+        }
         
     }
+    
+    func register() {
+        let userInfoReq = UserInfoRequest(start: {
+            
+        }, success: { (userModel) in
+            DispatchQueue.main.async {
+                self.goMainPage()
+            }
+            
+        }) { (errorMessage) in
+            DispatchQueue.main.async {
+                Tools.showTap(message: errorMessage, superVC: self)
+            }
+        }
+        userInfoReq.register(userName: userInfo.userName, password: passwordTextField.text!)
+    }
+    
+    func login() {
+        let userInfoReq = UserInfoRequest(start: {
+            
+        }, success: { (userModel) in
+            DispatchQueue.main.async {
+                self.goMainPage()
+            }
+            
+        }) { (errorMessage) in
+            DispatchQueue.main.async {
+                Tools.showTap(message: errorMessage, superVC: self)
+            }
+        }
+        userInfoReq.login(userName: userInfo.userName, password: passwordTextField.text!)
+    }
+    
+    func goMainPage() {
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "MainTableViewControllerNav")
+        self.present(vc, animated: true) {
+        let _ = self.navigationController?.popViewController(animated: false)
+        }
+//        self.navigationController?.pushViewController(vc, animated: true)
+    }
+
 
 }

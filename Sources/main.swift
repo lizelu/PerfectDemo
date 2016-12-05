@@ -131,7 +131,7 @@ func requestHandler(request: HTTPRequest, response:HTTPResponse) {
 }
 
 //根据用户名查询用户ID
-routes.add(method: .get, uri: "/user") { (request, response) in
+routes.add(method: .post, uri: "/queryUserInfoByUserName") { (request, response) in
     guard let userName: String = request.param(name: "userName") else {
         LogFile.error("userName为nil")
         return
@@ -145,7 +145,7 @@ routes.add(method: .get, uri: "/user") { (request, response) in
     response.completed()
 }
 
-routes.add(method: .post, uri: "/user") { (request, response) in
+routes.add(method: .post, uri: "/register") { (request, response) in
     guard let userName: String = request.param(name: "userName") else {
         LogFile.error("userName为nil")
         return
@@ -164,9 +164,25 @@ routes.add(method: .post, uri: "/user") { (request, response) in
     response.completed()
 }
 
-routes.add(method: .put, uri: "/user") { (request, response) in
-    requestHandler(request: request, response: response)
+routes.add(method: .post, uri: "/login") { (request, response) in
+    guard let userName: String = request.param(name: "userName") else {
+        LogFile.error("userName为nil")
+        return
+    }
+    
+    guard let password: String = request.param(name: "password") else {
+        LogFile.error("password为nil")
+        return
+    }
+    guard let json = UserOperator().queryUserInfo (userName: userName, password: password) else {
+        LogFile.error("josn为nil")
+        return
+    }
+    LogFile.info(json)
+    response.setBody(string: json)
+    response.completed()
 }
+
 
 routes.add(method: .delete, uri: "/user") { (request, response) in
    requestHandler(request: request, response: response)
