@@ -108,6 +108,39 @@ return
         let params: [String:String] = ["contentId": contentId]
         request.postRequest(path: "\(requestPath)", parameters: params)
     }
-
+    
+    func contentAdd(model: ContentModel) {
+        let requestPath = "\(RequestHome)\(RequestContentAdd)"
+        let request = Request(start: {
+            self.start()
+        }, success: { (json) in
+            self.success(json)
+            
+        }) { (errorMessage) in
+            self.faile(errorMessage)
+        }
+        
+        let params: [String:String] = ["userId": AccountManager.share().userInfo.userId,
+                                       "title": model.title,
+                                       "content": model.content]
+        request.postRequest(path: "\(requestPath)", parameters: params)
+    }
+    
+    func contentUpdate(model: ContentModel) {
+        let requestPath = "\(RequestHome)\(RequestContentUpdate)"
+        let request = Request(start: {
+            self.start()
+        }, success: { (json) in
+            self.success(json)
+            
+        }) { (errorMessage) in
+            self.faile(errorMessage)
+        }
+        
+        let params: [String:String] = ["contentId": model.contentId,
+                                       "title": model.title,
+                                       "content": model.content]
+        request.postRequest(path: "\(requestPath)", parameters: params)
+    }
 
 }

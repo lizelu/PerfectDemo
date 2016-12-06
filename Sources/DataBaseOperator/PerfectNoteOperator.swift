@@ -28,6 +28,7 @@ class BaseOperator {
     var responseJson: [String : Any] = BaseResponseJson    
     
 }
+
 class UserOperator: BaseOperator {
    
     let userTableName = "user"
@@ -135,5 +136,31 @@ class UserOperator: BaseOperator {
             LogFile.info("插入成功")
             return queryUserInfo(userName: userName, password: password)
         }
+    }
+}
+
+class ContentOperator: BaseOperator {
+    let contentTableName = "content"
+    
+    func addContent(userId: String, title: String, content: String) -> String? {
+        
+        let values = "('\(userId)', '\(title)', '\(content)')"
+        let statement = "insert into \(contentTableName) (userID, title, content) values \(values)"
+        LogFile.info("执行SQL:\(statement)")
+        
+        if !mysql.query(statement: statement) {
+            LogFile.error("\(statement)插入失败")
+            self.responseJson[ResultKey] = RequestResultFaile
+            self.responseJson[ErrorMessageKey] = "创建\(title)失败"
+        } else {
+            LogFile.info("插入成功")
+            self.responseJson[ResultKey] = RequestResultSuccess
+        }
+        
+        guard let josn = try? responseJson.jsonEncodedString() else {
+            return nil
+        }
+        return josn
+
     }
 }

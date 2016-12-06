@@ -309,9 +309,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="iNote" id="baV-1l-eJ0">
-                        <barButtonItem key="rightBarButtonItem" title="注销" id="ef5-fc-A2m">
+                        <barButtonItem key="leftBarButtonItem" title="注销" id="ef5-fc-A2m">
                             <connections>
                                 <action selector="tapLoginOutButton:" destination="fDL-DA-Mb4" id="zCM-5W-usX"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gBx-4E-DB4">
+                            <connections>
+                                <action selector="tapAddButton:" destination="fDL-DA-Mb4" id="JeF-tc-v2n"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

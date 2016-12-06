@@ -30,6 +30,102 @@ let server = HTTPServer()
 // Register your own routes and handlers
 var routes = Routes()
 
+//根据用户名查询用户ID
+routes.add(method: .post, uri: "/queryUserInfoByUserName") { (request, response) in
+    guard let userName: String = request.param(name: "userName") else {
+        LogFile.error("userName为nil")
+        return
+    }
+    guard let json = UserOperator().queryUserInfo(userName: userName) else {
+        LogFile.error("josn为nil")
+        return
+    }
+    LogFile.info(json)
+    response.setBody(string: json)
+    response.completed()
+}
+
+routes.add(method: .post, uri: "/register") { (request, response) in
+    guard let userName: String = request.param(name: "userName") else {
+        LogFile.error("userName为nil")
+        return
+    }
+    
+    guard let password: String = request.param(name: "password") else {
+        LogFile.error("password为nil")
+        return
+    }
+    guard let json = UserOperator().insertUserInfo(userName: userName, password: password) else {
+        LogFile.error("josn为nil")
+        return
+    }
+    LogFile.info(json)
+    response.setBody(string: json)
+    response.completed()
+}
+
+routes.add(method: .post, uri: "/login") { (request, response) in
+    guard let userName: String = request.param(name: "userName") else {
+        LogFile.error("userName为nil")
+        return
+    }
+    
+    guard let password: String = request.param(name: "password") else {
+        LogFile.error("password为nil")
+        return
+    }
+    guard let json = UserOperator().queryUserInfo (userName: userName, password: password) else {
+        LogFile.error("josn为nil")
+        return
+    }
+    LogFile.info(json)
+    response.setBody(string: json)
+    response.completed()
+}
+
+//获取内容列表
+routes.add(method: .post, uri: "/contentList") { (request, response) in
+}
+
+routes.add(method: .post, uri: "/contentDetail") { (request, response) in
+
+}
+
+routes.add(method: .post, uri: "/contentAdd") { (request, response) in
+    guard let userId: String = request.param(name: "userId") else {
+        LogFile.error("userId为nil")
+        return
+    }
+    
+    guard let title: String = request.param(name: "title") else {
+        LogFile.error("title为nil")
+        return
+    }
+    
+    guard let content: String = request.param(name: "content") else {
+        LogFile.error("content为nil")
+        return
+    }
+    
+    guard let json = ContentOperator().addContent(userId: userId, title: title, content: content) else {
+        LogFile.error("josn为nil")
+        return
+    }
+    LogFile.info(json)
+    response.setBody(string: json)
+    response.completed()
+}
+
+routes.add(method: .post, uri: "/contentUpdate") { (request, response) in
+}
+
+
+
+
+
+
+
+
 //MARK: - 路由
 //MARK: - 路由变量
 let valueKey = "key"
@@ -130,58 +226,6 @@ func requestHandler(request: HTTPRequest, response:HTTPResponse) {
     response.completed()
 }
 
-//根据用户名查询用户ID
-routes.add(method: .post, uri: "/queryUserInfoByUserName") { (request, response) in
-    guard let userName: String = request.param(name: "userName") else {
-        LogFile.error("userName为nil")
-        return
-    }
-    guard let json = UserOperator().queryUserInfo(userName: userName) else {
-        LogFile.error("josn为nil")
-        return
-    }
-    LogFile.info(json)
-    response.setBody(string: json)
-    response.completed()
-}
-
-routes.add(method: .post, uri: "/register") { (request, response) in
-    guard let userName: String = request.param(name: "userName") else {
-        LogFile.error("userName为nil")
-        return
-    }
-    
-    guard let password: String = request.param(name: "password") else {
-        LogFile.error("password为nil")
-        return
-    }
-    guard let json = UserOperator().insertUserInfo(userName: userName, password: password) else {
-        LogFile.error("josn为nil")
-        return
-    }
-    LogFile.info(json)
-    response.setBody(string: json)
-    response.completed()
-}
-
-routes.add(method: .post, uri: "/login") { (request, response) in
-    guard let userName: String = request.param(name: "userName") else {
-        LogFile.error("userName为nil")
-        return
-    }
-    
-    guard let password: String = request.param(name: "password") else {
-        LogFile.error("password为nil")
-        return
-    }
-    guard let json = UserOperator().queryUserInfo (userName: userName, password: password) else {
-        LogFile.error("josn为nil")
-        return
-    }
-    LogFile.info(json)
-    response.setBody(string: json)
-    response.completed()
-}
 
 
 routes.add(method: .delete, uri: "/user") { (request, response) in

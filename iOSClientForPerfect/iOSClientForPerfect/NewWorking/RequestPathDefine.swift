@@ -13,5 +13,7 @@ let RequestUserLogin = "/login"
 let RequestUserRegister = "/register"
 let RequestContentList = "/contentList"
 let RequestContentDetail = "/contentDetail"
+let RequestContentAdd = "/contentAdd"
+let RequestContentUpdate = "/contentUpdate"
 
 
