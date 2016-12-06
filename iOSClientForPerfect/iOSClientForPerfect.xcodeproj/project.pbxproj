@@ -20,6 +20,7 @@
 		F4CC9FF61DF6A8FE00A90E8C /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC9FF51DF6A8FE00A90E8C /* AccountManager.swift */; };
 		F4CC9FF81DF6ABD900A90E8C /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC9FF71DF6ABD900A90E8C /* ContentModel.swift */; };
 		F4CC9FFA1DF6AD0E00A90E8C /* ContentReqest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC9FF91DF6AD0E00A90E8C /* ContentReqest.swift */; };
+		F4CC9FFC1DF6B9F500A90E8C /* ContentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC9FFB1DF6B9F500A90E8C /* ContentDetailViewController.swift */; };
 		F4E7C20E1DEEC880009CD13C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E7C20D1DEEC880009CD13C /* AppDelegate.swift */; };
 		F4E7C2131DEEC880009CD13C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E7C2111DEEC880009CD13C /* Main.storyboard */; };
 		F4E7C2151DEEC880009CD13C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4E7C2141DEEC880009CD13C /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		F4CC9FF51DF6A8FE00A90E8C /* AccountManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
 		F4CC9FF71DF6ABD900A90E8C /* ContentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		F4CC9FF91DF6AD0E00A90E8C /* ContentReqest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentReqest.swift; sourceTree = "<group>"; };
+		F4CC9FFB1DF6B9F500A90E8C /* ContentDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentDetailViewController.swift; sourceTree = "<group>"; };
 		F4E7C20A1DEEC880009CD13C /* iOSClientForPerfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSClientForPerfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4E7C20D1DEEC880009CD13C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4E7C2121DEEC880009CD13C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				F48676361DF2CE3800078859 /* InputUserNameController.swift */,
 				F42CFDB71DF544CE00EA8BCF /* LoginOrRegisterViewController.swift */,
 				F42CFDB91DF5451600EA8BCF /* MainTableViewController.swift */,
+				F4CC9FFB1DF6B9F500A90E8C /* ContentDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				F4E7C20E1DEEC880009CD13C /* AppDelegate.swift in Sources */,
 				F42CFDBA1DF5451600EA8BCF /* MainTableViewController.swift in Sources */,
 				F486763C1DF2D14D00078859 /* Tools.swift in Sources */,
+				F4CC9FFC1DF6B9F500A90E8C /* ContentDetailViewController.swift in Sources */,
 				F4CC9FF61DF6A8FE00A90E8C /* AccountManager.swift in Sources */,
 				F4CC9FFA1DF6AD0E00A90E8C /* ContentReqest.swift in Sources */,
 			);

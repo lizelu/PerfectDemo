@@ -8,6 +8,7 @@
 
 import Foundation
 class ContentModel {
+    var contentId = ""
     var title = ""
     var content = ""
     var createTime = ""

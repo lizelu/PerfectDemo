@@ -9,6 +9,23 @@
 import Foundation
 class ContentRequest: BaseRequest {
     func fetchContentList(userId: String){
+        
+        //Mark: - test
+        var contents: Array<ContentModel> = []
+        
+        for i in 0..<30 {
+            let contentModels = ContentModel()
+           
+            contentModels.title = "标题\(i)"
+            contentModels.createTime = "\(Date())"
+            
+            contents.append(contentModels)
+        }
+        self.success(contents)
+return
+        
+        
+        
         let requestPath = "\(RequestHome)\(RequestContentList)"
         let request = Request(start: {
             self.start()
@@ -16,7 +33,6 @@ class ContentRequest: BaseRequest {
             guard let list = json as? [String: Any] else {
                 return
             }
-            
             
             var contents: Array<ContentModel> = []
             
@@ -27,6 +43,12 @@ class ContentRequest: BaseRequest {
                 
                 for item in contentList {
                     let contentModels = ContentModel()
+                    
+                    guard let contentId = item["contentId"] else {
+                        continue
+                    }
+                    contentModels.contentId = contentId
+                    
                     guard let title = item["title"] else {
                         continue
                     }
@@ -51,6 +73,15 @@ class ContentRequest: BaseRequest {
     }
     
     func fetchContentDetail(contentId: String){
+        
+        let contentModel = ContentModel()
+        
+        contentModel.content = "内容"
+        self.success(contentModel)
+        
+        return
+        
+        
         let requestPath = "\(RequestHome)\(RequestContentDetail)"
         let request = Request(start: {
             self.start()
@@ -65,11 +96,7 @@ class ContentRequest: BaseRequest {
                 guard let content = contentDetail["list"]! as? [String:String] else {
                     return
                 }
-                
-                contentModel.title = content["title"] ?? ""
                 contentModel.content = content["content"] ?? ""
-                contentModel.createTime = content["createTime"] ?? ""
-                
             }
             
             self.success(contentModel)
