@@ -11,3 +11,7 @@ let RequestHome = "http://127.0.0.1:8181"
 let RequestUserInfoPath = "/queryUserInfoByUserName"
 let RequestUserLogin = "/login"
 let RequestUserRegister = "/register"
+let RequestContentList = "/contentList"
+let RequestContentDetail = "/contentDetail"
+
+

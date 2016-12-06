@@ -60,7 +60,7 @@ class UserInfoRequest: BaseRequest {
                 userModel.regestTime = userInfo["registerTime"] ?? ""
                 
             }
-            
+            AccountManager.share().userInfo = userModel
             self.success(userModel)
             
         }) { (errorMessage) in
@@ -90,9 +90,8 @@ class UserInfoRequest: BaseRequest {
                 userModel.userName = userInfo["userName"] ?? ""
                 userModel.password = userInfo["password"] ?? ""
                 userModel.regestTime = userInfo["registerTime"] ?? ""
-                
             }
-            
+            AccountManager.share().userInfo = userModel
             self.success(userModel)
             
         }) { (errorMessage) in
@@ -101,6 +100,4 @@ class UserInfoRequest: BaseRequest {
         let params: [String:String] = ["userName": userName, "password": password]
         request.postRequest(path: "\(requestPath)", parameters: params)
     }
-
-
 }
