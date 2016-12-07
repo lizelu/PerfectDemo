@@ -8,6 +8,11 @@
 
 import UIKit
 
+
+/// 当前页面类型
+///
+/// - Add: 添加Note
+/// - Update: 更新Note
 enum ContentDetailType {
     case Add, Update
     func title() -> String {
@@ -29,20 +34,47 @@ class ContentDetailViewController: UIViewController {
     var content: ContentModel!
     var vcType: ContentDetailType = .Add
     
+    //MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configCurrentVC()
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    //MARK: - Setter and Getter
     func setUpdateMainVC(update: @escaping RefreshMainTableView) {
         self.updateMainVC = update
     }
     
-    func configCurrentVC() {
+    //MARK: - Response Event
+    @IBAction func tapGestrueRecognizer(_ sender: Any) {
+        self.view.endEditing(true)
+    }
+
+    @IBAction func tapSubmitButton(_ sender: Any) {
+        if self.titleTextField.text == "" {
+            Tools.showTap(message: "请输入标题", superVC: self)
+            return
+        }
+        
+        if self.contentTextView.text == "" {
+            Tools.showTap(message: "请输入内容", superVC: self)
+            return
+        }
+        if self.content == nil {
+            self.content = ContentModel()
+        }
+        self.content.title = self.titleTextField.text!
+        self.content.content = self.contentTextView.text!
+        self.requestAddOrUpdate()
+    }
+    
+    
+    //MARK: - Private Method
+    private func configCurrentVC() {
         if content == nil {
             self.vcType = .Add
         } else {
@@ -55,6 +87,8 @@ class ContentDetailViewController: UIViewController {
         self.submitButton.setTitle(self.vcType.title(), for: .normal)
     }
     
+    
+    /// 获取Note的内容
     private func fetchContent() {
         let listRequest = ContentRequest(start: {
         }, success: { (content) in
@@ -71,36 +105,27 @@ class ContentDetailViewController: UIViewController {
                 Tools.showTap(message: errorMessage, superVC: self)
             }
         }
-       
+        
         print(self.content.contentId)
         listRequest.fetchContentDetail(contentId: self.content.contentId)
     }
-
     
-    @IBAction func tapGestrueRecognizer(_ sender: Any) {
-        self.view.endEditing(true)
+    /// 添加或者请求更新
+    private func requestAddOrUpdate() {
+        switch self.vcType {
+        case .Add:
+            createAddOrUpdateRequestObj().contentAdd(model: self.content)
+        case .Update:
+            createAddOrUpdateRequestObj().contentUpdate(model: self.content)
+        }
     }
-
-    @IBAction func tapSubmitButton(_ sender: Any) {
-        
-        if self.titleTextField.text == "" {
-            Tools.showTap(message: "请输入标题", superVC: self)
-            return
-        }
-        
-        if self.contentTextView.text == "" {
-            Tools.showTap(message: "请输入内容", superVC: self)
-            return
-        }
-        
-        if self.content == nil {
-            self.content = ContentModel()
-        }
-        
-        self.content.title = self.titleTextField.text!
-        self.content.content = self.contentTextView.text!
-        
-        let request = ContentRequest(start: {
+    
+    
+    /// 创建添加或者请求对象
+    ///
+    /// - Returns:
+    private func createAddOrUpdateRequestObj() -> ContentRequest {
+        return ContentRequest(start: {
         }, success: { (content) in
             DispatchQueue.main.async {
                 if self.updateMainVC != nil {
@@ -114,14 +139,6 @@ class ContentDetailViewController: UIViewController {
                 Tools.showTap(message: errorMessage, superVC: self)
             }
         }
-        
-        switch self.vcType {
-        case .Add:
-            request.contentAdd(model: self.content)
-        case .Update:
-            request.contentUpdate(model: self.content)
-        }
-
     }
 
 }

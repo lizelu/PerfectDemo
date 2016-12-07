@@ -11,7 +11,8 @@ import UIKit
 class MainTableViewController: UITableViewController {
     
     var contents: Array<ContentModel> = []
-
+    
+    //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = false
@@ -21,6 +22,28 @@ class MainTableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    //MARK: - Response Event
+    @IBAction func tapLoginOutButton(_ sender: Any) {
+        UserInfoRequest.loginOut()
+        UIApplication.shared.delegate?.window??.rootViewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginVCNC")
+    }
+
+    @IBAction func tapRefreshButton(_ sender: Any) {
+        self.fetchList()
+    }
+    
+    @IBAction func tapAddButton(_ sender: Any) {
+        guard let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ContentDetailViewController") as? ContentDetailViewController else {
+            return
+        }
+        vc.setUpdateMainVC {
+            self.fetchList()
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    //MARK: - Private Method
     
     private func fetchList() {
         let listRequest = ContentRequest(start: {
@@ -32,7 +55,7 @@ class MainTableViewController: UITableViewController {
                 self.contents = list
                 self.tableView.reloadData()
             }
-
+            
         }) { (errorMessage) in
             DispatchQueue.main.async {
                 Tools.showTap(message: errorMessage, superVC: self)
@@ -40,25 +63,8 @@ class MainTableViewController: UITableViewController {
         }
         listRequest.fetchContentList(userId: AccountManager.share().userId)
     }
+
     
-    @IBAction func tapLoginOutButton(_ sender: Any) {
-        UserInfoRequest.loginOut()
-        UIApplication.shared.delegate?.window??.rootViewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginVCNC")
-    }
-
-    @IBAction func tapRefreshButton(_ sender: Any) {
-        self.fetchList()
-    }
-    @IBAction func tapAddButton(_ sender: Any) {
-        guard let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ContentDetailViewController") as? ContentDetailViewController else {
-            return
-        }
-        vc.setUpdateMainVC {
-            self.fetchList()
-        }
-        self.navigationController?.pushViewController(vc, animated: true)
-
-    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
