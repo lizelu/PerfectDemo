@@ -9,23 +9,6 @@
 import Foundation
 class ContentRequest: BaseRequest {
     func fetchContentList(userId: String){
-        
-        //Mark: - test
-        var contents: Array<ContentModel> = []
-        
-        for i in 0..<30 {
-            let contentModels = ContentModel()
-           
-            contentModels.title = "标题\(i)"
-            contentModels.createTime = "\(Date())"
-            
-            contents.append(contentModels)
-        }
-        self.success(contents)
-return
-        
-        
-        
         let requestPath = "\(RequestHome)\(RequestContentList)"
         let request = Request(start: {
             self.start()
@@ -54,6 +37,7 @@ return
                     }
                     contentModels.title = title
                     
+                        
                     guard let time = item["time"] else {
                         continue
                     }
@@ -72,16 +56,8 @@ return
         request.postRequest(path: "\(requestPath)", parameters: params)
     }
     
+    
     func fetchContentDetail(contentId: String){
-        
-        let contentModel = ContentModel()
-        
-        contentModel.content = "内容"
-        self.success(contentModel)
-        
-        return
-        
-        
         let requestPath = "\(RequestHome)\(RequestContentDetail)"
         let request = Request(start: {
             self.start()

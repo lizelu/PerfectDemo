@@ -7,6 +7,12 @@
 //
 
 import Foundation
+
+let LoginUserNameKey = "UserName"
+let LoginPasswordKey = "Password"
+let loginTokenKey = "key" //尚未实现，此Demo的二次登录先记录Password来实现
+
+
 let RequestHome = "http://127.0.0.1:8181"
 let RequestUserInfoPath = "/queryUserInfoByUserName"
 let RequestUserLogin = "/login"

@@ -71,6 +71,8 @@ class ContentDetailViewController: UIViewController {
                 Tools.showTap(message: errorMessage, superVC: self)
             }
         }
+       
+        print(self.content.contentId)
         listRequest.fetchContentDetail(contentId: self.content.contentId)
     }
 
@@ -93,9 +95,10 @@ class ContentDetailViewController: UIViewController {
         
         if self.content == nil {
             self.content = ContentModel()
-            self.content.title = self.titleTextField.text!
-            self.content.content = self.contentTextView.text!
         }
+        
+        self.content.title = self.titleTextField.text!
+        self.content.content = self.contentTextView.text!
         
         let request = ContentRequest(start: {
         }, success: { (content) in

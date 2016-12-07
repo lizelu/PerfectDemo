@@ -42,10 +42,14 @@ class MainTableViewController: UITableViewController {
     }
     
     @IBAction func tapLoginOutButton(_ sender: Any) {
+        UserInfoRequest.loginOut()
         self.dismiss(animated: true) {
         }
     }
 
+    @IBAction func tapRefreshButton(_ sender: Any) {
+        self.fetchList()
+    }
     @IBAction func tapAddButton(_ sender: Any) {
         guard let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ContentDetailViewController") as? ContentDetailViewController else {
             return

@@ -161,6 +161,103 @@ class ContentOperator: BaseOperator {
             return nil
         }
         return josn
-
     }
+    
+    func queryContentList(userId: String) -> String? {
+        let statement = "select id, title, content, create_time from \(contentTableName) where userID='\(userId)'"
+        LogFile.info("执行SQL:\(statement)")
+        
+        if !mysql.query(statement: statement) {
+            self.responseJson[ResultKey] = RequestResultFaile
+            self.responseJson[ErrorMessageKey] = "查询失败"
+            LogFile.error("\(statement)查询失败")
+        } else {
+            LogFile.info("SQL:\(statement)查询成功")
+            
+            // 在当前会话过程中保存查询结果
+            let results = mysql.storeResults()! //因为上一步已经验证查询是成功的，因此这里我们认为结果记录集可以强制转换为期望的数据结果。当然您如果需要也可以用if-let来调整这一段代码。
+            
+            var ary = [[String:String]]() //创建一个字典数组用于存储结果
+            if results.numRows() == 0 {
+                self.responseJson[ResultKey] = RequestResultFaile
+                self.responseJson[ErrorMessageKey] = "尚没有录入新的Note, 请添加！"
+                LogFile.error("\(statement)尚没有录入新的Note, 请添加！")
+            } else {
+                results.forEachRow { row in
+                    var dic = [String:String]() //创建一个字典用于存储结果
+                    dic["contentId"] = "\(row[0]!)"
+                    dic["title"] = "\(row[1]!)"
+                    dic["content"] = "\(row[2]!)"
+                    dic["time"] = "\(row[3]!)"
+                    ary.append(dic)
+                }
+                
+                self.responseJson[ResultKey] = RequestResultSuccess
+                self.responseJson[ResultListKey] = ary
+            }
+        }
+        guard let josn = try? responseJson.jsonEncodedString() else {
+            return nil
+        }
+        return josn
+    }
+    
+    
+    func queryContentDetail(contentId: String) -> String? {
+        let statement = "select content from \(contentTableName) where id='\(contentId)'"
+        LogFile.info("执行SQL:\(statement)")
+        
+        if !mysql.query(statement: statement) {
+            self.responseJson[ResultKey] = RequestResultFaile
+            self.responseJson[ErrorMessageKey] = "查询失败"
+            LogFile.error("\(statement)查询失败")
+        } else {
+            LogFile.info("SQL:\(statement)查询成功")
+            
+            // 在当前会话过程中保存查询结果
+            let results = mysql.storeResults()!
+            
+            var dic = [String:String]() //创建一个字典数于存储结果
+            if results.numRows() == 0 {
+                self.responseJson[ResultKey] = RequestResultFaile
+                self.responseJson[ErrorMessageKey] = "获取Note详情失败！"
+                LogFile.error("\(statement)获取Note详情失败！")
+            } else {
+                results.forEachRow { row in
+                    guard let content = row.first! else {
+                        return
+                    }
+                    dic["content"] = "\(content)"
+                }
+                
+                self.responseJson[ResultKey] = RequestResultSuccess
+                self.responseJson[ResultListKey] = dic
+            }
+        }
+        
+        guard let josn = try? responseJson.jsonEncodedString() else {
+            return nil
+        }
+        return josn
+    }
+    
+    func updateContent(contentId: String, title: String, content: String) -> String? {
+        let statement = "update \(contentTableName) set title='\(title)', content='\(content)', create_time=now() where id='\(contentId)'"
+        LogFile.info("执行SQL:\(statement)")
+        
+        if !mysql.query(statement: statement) {
+            self.responseJson[ResultKey] = RequestResultFaile
+            self.responseJson[ErrorMessageKey] = "更新失败"
+            LogFile.error("\(statement)更新失败")
+        } else {
+            LogFile.info("SQL:\(statement) 更新成功")
+            self.responseJson[ResultKey] = RequestResultSuccess
+        }
+        
+        guard let josn = try? responseJson.jsonEncodedString() else {
+            return nil
+        }
+        return josn
+    }
+
 }

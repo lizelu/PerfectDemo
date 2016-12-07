@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -314,11 +315,18 @@
                                 <action selector="tapLoginOutButton:" destination="fDL-DA-Mb4" id="zCM-5W-usX"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gBx-4E-DB4">
-                            <connections>
-                                <action selector="tapAddButton:" destination="fDL-DA-Mb4" id="JeF-tc-v2n"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="gBx-4E-DB4">
+                                <connections>
+                                    <action selector="tapAddButton:" destination="fDL-DA-Mb4" id="JeF-tc-v2n"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="refresh" id="1TY-pi-pcn">
+                                <connections>
+                                    <action selector="tapRefreshButton:" destination="fDL-DA-Mb4" id="hIF-Sp-0XY"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QYS-Q8-65f" userLabel="First Responder" sceneMemberID="firstResponder"/>
