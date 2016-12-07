@@ -168,7 +168,7 @@ class ContentOperator: BaseOperator {
     func queryContentList(userId: String) -> String? {
         let statement = "select id, title, content, create_time from \(contentTableName) where userID='\(userId)'"
         LogFile.info("执行SQL:\(statement)")
-        
+        print(mysql)
         if !mysql.query(statement: statement) {
             self.responseJson[ResultKey] = RequestResultFaile
             self.responseJson[ErrorMessageKey] = "查询失败"
