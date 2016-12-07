@@ -17,20 +17,20 @@ let ErrorMessageKey = "errorMessage"
 var BaseResponseJson: [String : Any] = [ResultListKey:[], ResultKey:RequestResultSuccess, ErrorMessageKey:""]
 
 
+/// 操作数据库的基类
 class BaseOperator {
-     let dataBaseName = "perfect_note"
+    let dataBaseName = "perfect_note"
     var mysql: MySQL {
         get {
             return MySQLConnect.shareInstance(dataBaseName: dataBaseName)
         }
     }
-    
-    var responseJson: [String : Any] = BaseResponseJson    
-    
+    var responseJson: [String : Any] = BaseResponseJson
 }
 
+
+/// 操作用户相关的数据表
 class UserOperator: BaseOperator {
-   
     let userTableName = "user"
     
     //MARK: - Insert User Info,返回用户信息
@@ -112,8 +112,6 @@ class UserOperator: BaseOperator {
     }
 
     
-    
-    
     /// insert user info
     ///
     /// - Parameters:
@@ -139,6 +137,10 @@ class UserOperator: BaseOperator {
     }
 }
 
+
+
+
+/// 操作内容相关的数据表
 class ContentOperator: BaseOperator {
     let contentTableName = "content"
     

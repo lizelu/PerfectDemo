@@ -11,6 +11,7 @@ import MySQL
 import PerfectLogger
 
 
+/// 连接MySql数据库的类
 class MySQLConnect {
     var host: String {
         get {
@@ -35,16 +36,15 @@ class MySQLConnect {
             return "admin!@#"
         }
     }
-    
     private var connect: MySQL!
     
-    private static var instance: MySQL!
+    //单例
+    private static var mysql: MySQL!
     public static func shareInstance(dataBaseName: String) -> MySQL{
-        if instance == nil {
-            instance = MySQLConnect(dataBaseName: dataBaseName).connect
+        if mysql == nil {
+            mysql = MySQLConnect(dataBaseName: dataBaseName).connect
         }
-        
-        return instance
+        return mysql
     }
     
     private init(dataBaseName: String) {
@@ -52,6 +52,8 @@ class MySQLConnect {
         self.selectDataBase(name: dataBaseName)
     }
     
+    
+    /// 连接数据库
     private func connectDataBase() {
         if connect == nil {
             connect = MySQL()
@@ -66,6 +68,10 @@ class MySQLConnect {
         LogFile.info("数据库连接成功")
     }
     
+    
+    /// 选择Scheme
+    ///
+    /// - Parameter name: <#name description#>
     func selectDataBase(name: String){
         // 选择具体的数据Schema
         guard connect.selectDatabase(named: name) else {
@@ -77,8 +83,7 @@ class MySQLConnect {
     }
     
     deinit {
-        defer {
-             //这个延后操作能够保证在程序结束时无论什么结果都会自动关闭数据库连接
-        }
+        //关闭数据库
+        connect.close()
     }
 }

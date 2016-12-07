@@ -30,6 +30,7 @@ let server = HTTPServer()
 // Register your own routes and handlers
 var routes = Routes()
 
+//MARK: - Note
 //根据用户名查询用户ID
 routes.add(method: .post, uri: "/queryUserInfoByUserName") { (request, response) in
     guard let userName: String = request.param(name: "userName") else {
@@ -45,6 +46,7 @@ routes.add(method: .post, uri: "/queryUserInfoByUserName") { (request, response)
     response.completed()
 }
 
+//注册
 routes.add(method: .post, uri: "/register") { (request, response) in
     guard let userName: String = request.param(name: "userName") else {
         LogFile.error("userName为nil")
@@ -64,12 +66,12 @@ routes.add(method: .post, uri: "/register") { (request, response) in
     response.completed()
 }
 
+//登录
 routes.add(method: .post, uri: "/login") { (request, response) in
     guard let userName: String = request.param(name: "userName") else {
         LogFile.error("userName为nil")
         return
     }
-    
     guard let password: String = request.param(name: "password") else {
         LogFile.error("password为nil")
         return
@@ -99,6 +101,7 @@ routes.add(method: .post, uri: "/contentList") { (request, response) in
     response.completed()
 }
 
+//获取详情
 routes.add(method: .post, uri: "/contentDetail") { (request, response) in
     guard let contentId: String = request.param(name: "contentId") else {
         LogFile.error("contentId为nil")
@@ -113,6 +116,7 @@ routes.add(method: .post, uri: "/contentDetail") { (request, response) in
     response.completed()
 }
 
+//添加内容
 routes.add(method: .post, uri: "/contentAdd") { (request, response) in
     guard let userId: String = request.param(name: "userId") else {
         LogFile.error("userId为nil")
@@ -138,6 +142,7 @@ routes.add(method: .post, uri: "/contentAdd") { (request, response) in
     response.completed()
 }
 
+//更新内容
 routes.add(method: .post, uri: "/contentUpdate") { (request, response) in
     guard let contentId: String = request.param(name: "contentId") else {
         LogFile.error("contentId为nil")
@@ -161,8 +166,10 @@ routes.add(method: .post, uri: "/contentUpdate") { (request, response) in
     LogFile.info(json)
     response.setBody(string: json)
     response.completed()
-
 }
+
+
+
 
 
 
