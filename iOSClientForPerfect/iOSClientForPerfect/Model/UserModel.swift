@@ -10,6 +10,5 @@ import Foundation
 class UserModel {
     public var userId: String = ""
     public var userName: String = ""
-    public var password: String = ""        //先当Token,正常是不能存储密码的
     public var regestTime: String = ""
 }

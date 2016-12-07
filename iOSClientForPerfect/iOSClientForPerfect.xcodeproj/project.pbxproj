@@ -10,11 +10,11 @@
 		F42CFDB81DF544CE00EA8BCF /* LoginOrRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42CFDB71DF544CE00EA8BCF /* LoginOrRegisterViewController.swift */; };
 		F42CFDBA1DF5451600EA8BCF /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42CFDB91DF5451600EA8BCF /* MainTableViewController.swift */; };
 		F48676371DF2CE3800078859 /* InputUserNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48676361DF2CE3800078859 /* InputUserNameController.swift */; };
-		F48676391DF2D11A00078859 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48676381DF2D11A00078859 /* ViewController.swift */; };
+		F48676391DF2D11A00078859 /* TESTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48676381DF2D11A00078859 /* TESTViewController.swift */; };
 		F486763C1DF2D14D00078859 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486763B1DF2D14D00078859 /* Tools.swift */; };
 		F486763E1DF2D38400078859 /* Reqeust.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486763D1DF2D38400078859 /* Reqeust.swift */; };
 		F48676401DF2F01700078859 /* UserInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486763F1DF2F01700078859 /* UserInfoRequest.swift */; };
-		F48676421DF2F82E00078859 /* RequestPathDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48676411DF2F82E00078859 /* RequestPathDefine.swift */; };
+		F48676421DF2F82E00078859 /* RequestDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48676411DF2F82E00078859 /* RequestDefine.swift */; };
 		F48676451DF2F8F000078859 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48676441DF2F8F000078859 /* UserModel.swift */; };
 		F4CC9FF41DF6A8DE00A90E8C /* MainPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC9FF31DF6A8DE00A90E8C /* MainPageCell.swift */; };
 		F4CC9FF61DF6A8FE00A90E8C /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC9FF51DF6A8FE00A90E8C /* AccountManager.swift */; };
@@ -31,11 +31,11 @@
 		F42CFDB71DF544CE00EA8BCF /* LoginOrRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginOrRegisterViewController.swift; sourceTree = "<group>"; };
 		F42CFDB91DF5451600EA8BCF /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		F48676361DF2CE3800078859 /* InputUserNameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputUserNameController.swift; sourceTree = "<group>"; };
-		F48676381DF2D11A00078859 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F48676381DF2D11A00078859 /* TESTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TESTViewController.swift; sourceTree = "<group>"; };
 		F486763B1DF2D14D00078859 /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		F486763D1DF2D38400078859 /* Reqeust.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reqeust.swift; sourceTree = "<group>"; };
 		F486763F1DF2F01700078859 /* UserInfoRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoRequest.swift; sourceTree = "<group>"; };
-		F48676411DF2F82E00078859 /* RequestPathDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestPathDefine.swift; sourceTree = "<group>"; };
+		F48676411DF2F82E00078859 /* RequestDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestDefine.swift; sourceTree = "<group>"; };
 		F48676441DF2F8F000078859 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		F4CC9FF31DF6A8DE00A90E8C /* MainPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageCell.swift; sourceTree = "<group>"; };
 		F4CC9FF51DF6A8FE00A90E8C /* AccountManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 		F48676341DF2CDDA00078859 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				F48676381DF2D11A00078859 /* ViewController.swift */,
+				F48676381DF2D11A00078859 /* TESTViewController.swift */,
 				F48676361DF2CE3800078859 /* InputUserNameController.swift */,
 				F42CFDB71DF544CE00EA8BCF /* LoginOrRegisterViewController.swift */,
 				F42CFDB91DF5451600EA8BCF /* MainTableViewController.swift */,
@@ -76,7 +76,7 @@
 		F48676351DF2CE0800078859 /* NewWorking */ = {
 			isa = PBXGroup;
 			children = (
-				F48676411DF2F82E00078859 /* RequestPathDefine.swift */,
+				F48676411DF2F82E00078859 /* RequestDefine.swift */,
 				F486763D1DF2D38400078859 /* Reqeust.swift */,
 				F486763F1DF2F01700078859 /* UserInfoRequest.swift */,
 				F4CC9FF91DF6AD0E00A90E8C /* ContentRequest.swift */,
@@ -217,11 +217,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F48676401DF2F01700078859 /* UserInfoRequest.swift in Sources */,
-				F48676391DF2D11A00078859 /* ViewController.swift in Sources */,
+				F48676391DF2D11A00078859 /* TESTViewController.swift in Sources */,
 				F48676451DF2F8F000078859 /* UserModel.swift in Sources */,
 				F42CFDB81DF544CE00EA8BCF /* LoginOrRegisterViewController.swift in Sources */,
 				F4CC9FF81DF6ABD900A90E8C /* ContentModel.swift in Sources */,
-				F48676421DF2F82E00078859 /* RequestPathDefine.swift in Sources */,
+				F48676421DF2F82E00078859 /* RequestDefine.swift in Sources */,
 				F486763E1DF2D38400078859 /* Reqeust.swift in Sources */,
 				F4CC9FF41DF6A8DE00A90E8C /* MainPageCell.swift in Sources */,
 				F48676371DF2CE3800078859 /* InputUserNameController.swift in Sources */,

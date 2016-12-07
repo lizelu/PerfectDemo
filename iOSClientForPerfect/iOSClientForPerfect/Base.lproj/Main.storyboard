@@ -277,15 +277,15 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sk4-Fo-gsa">
-                                            <rect key="frame" x="13" y="56" width="347" height="1"/>
-                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <rect key="frame" x="0.0" y="52" width="378" height="5"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="1" id="Bf7-nc-9f6"/>
+                                                <constraint firstAttribute="height" constant="5" id="Bf7-nc-9f6"/>
                                             </constraints>
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="sk4-Fo-gsa" firstAttribute="leading" secondItem="HdF-15-fk0" secondAttribute="leading" constant="13" id="6WK-cM-pXf"/>
+                                        <constraint firstItem="sk4-Fo-gsa" firstAttribute="leading" secondItem="HdF-15-fk0" secondAttribute="leading" id="6WK-cM-pXf"/>
                                         <constraint firstItem="FR4-MQ-dIg" firstAttribute="leading" secondItem="cVm-TR-Wq8" secondAttribute="trailing" constant="8" id="GbB-7G-pav"/>
                                         <constraint firstAttribute="bottom" secondItem="sk4-Fo-gsa" secondAttribute="bottom" id="Gfg-gn-rmP"/>
                                         <constraint firstItem="cVm-TR-Wq8" firstAttribute="centerY" secondItem="HdF-15-fk0" secondAttribute="centerY" id="Xdf-dZ-hDg"/>
@@ -295,7 +295,7 @@
                                         <constraint firstAttribute="trailing" secondItem="a3b-1A-jn7" secondAttribute="trailing" id="rN8-1D-tU2"/>
                                         <constraint firstItem="FR4-MQ-dIg" firstAttribute="top" secondItem="HdF-15-fk0" secondAttribute="top" constant="14" id="wiy-8Y-25F"/>
                                         <constraint firstItem="a3b-1A-jn7" firstAttribute="top" secondItem="FR4-MQ-dIg" secondAttribute="bottom" constant="2" id="z1n-gg-TaK"/>
-                                        <constraint firstAttribute="trailing" secondItem="sk4-Fo-gsa" secondAttribute="trailing" constant="-52" id="zAo-GG-46K"/>
+                                        <constraint firstAttribute="trailing" secondItem="sk4-Fo-gsa" secondAttribute="trailing" constant="-70" id="zAo-GG-46K"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

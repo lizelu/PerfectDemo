@@ -7,16 +7,18 @@
 //
 
 import Foundation
+
+/// 用户信息单例
 class AccountManager: NSObject, NSCoding {
     public var userId: String = ""
     public var userName: String = ""
-    public var password: String = ""        //先当Token,正常是不能存储密码的
     public var regestTime: String = ""
 
+    //获取单例的方法
     private static var instance: AccountManager! = nil
     static func share() -> AccountManager {
         if instance == nil {
-            let obj = getInstanceFromLocation()
+            let obj = getInstanceFromLocation()     //解归档
             if obj != nil {
                 instance = obj!
             } else {
@@ -28,21 +30,27 @@ class AccountManager: NSObject, NSCoding {
     
     private override init() {}
     
+    
     required init?(coder aDecoder: NSCoder) {
         super.init()
         self.userId = aDecoder.decodeObject(forKey: "userId") as! String
         self.userName = aDecoder.decodeObject(forKey: "userName") as! String
-        self.password = aDecoder.decodeObject(forKey: "password") as! String
         self.regestTime = aDecoder.decodeObject(forKey: "regestTime") as! String
     }
     
+    /// 归档
+    ///
+    /// - Parameter aCoder: <#aCoder description#>
     func encode(with aCoder: NSCoder) {
         aCoder.encode(self.userId, forKey: "userId")
         aCoder.encode(self.userName, forKey: "userName")
-        aCoder.encode(self.password, forKey: "password")
         aCoder.encode(self.regestTime, forKey: "regestTime")
     }
     
+    
+    /// 从UserDefault中进行解归档
+    ///
+    /// - Returns: <#return value description#>
     static func getInstanceFromLocation() -> AccountManager? {
         guard let data = UserDefaults.standard.value(forKey: LoginUserInfoKey) as? Data else {
             return nil
@@ -55,5 +63,4 @@ class AccountManager: NSObject, NSCoding {
         return instance
     }
 
-    
 }

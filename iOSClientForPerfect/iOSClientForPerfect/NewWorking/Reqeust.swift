@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 let RequestResultSuccess: String = "SUCCESS"
 let RequestResultFaile: String = "FAILE"
 let ResultListKey = "list"
@@ -17,12 +18,9 @@ typealias RequestStart = () -> Void
 typealias RequestSuccess = (Any) -> Void
 typealias RequestFailed = (String) -> Void
 
+//请求方式枚举
 enum RequestMethodTypes {
-    case GET,
-    POST,
-    PUT,
-    DELETE,
-    CUSTOM(String)
+    case GET, POST, PUT, DELETE, CUSTOM(String)
     /// Convert to String
     public var description: String {
         switch self {
@@ -35,6 +33,7 @@ enum RequestMethodTypes {
     }
 }
 
+//网络请求基类
 class BaseRequest {
     var start: RequestStart
     var success: RequestSuccess
@@ -50,22 +49,44 @@ class BaseRequest {
 
 }
 
+//网络请求类--URLSession
 class Request: BaseRequest {
+    
+    /// GET请求
+    ///
+    /// - Parameters:
+    ///   - path: 请求路径
+    ///   - parameters: 请求参数
     func getRequest(path:String,
                     parameters:[String:String]) {
         self.sessionDataTaskRequest(method: .GET, path: path, parameters: parameters)
     }
     
+    /// POST请求
+    ///
+    /// - Parameters:
+    ///   - path: 请求路径
+    ///   - parameters: 请求参数
     func postRequest(path:String,
                      parameters:[String:String]) {
         self.sessionDataTaskRequest(method: .POST, path: path, parameters: parameters)
     }
     
+    /// PUT请求
+    ///
+    /// - Parameters:
+    ///   - path: 请求路径
+    ///   - parameters: 请求参数
     func putRequest(path:String,
                     parameters:[String:String]) {
         self.sessionDataTaskRequest(method: .PUT, path: path, parameters: parameters)
     }
     
+    /// DELETE请求
+    ///
+    /// - Parameters:
+    ///   - path: 请求路径
+    ///   - parameters: 请求参数
     func deleteRequest(path:String,
                     parameters:[String:String]) {
         self.sessionDataTaskRequest(method: .DELETE, path: path, parameters: parameters)
@@ -77,7 +98,9 @@ class Request: BaseRequest {
      - parameter parameters: 字典形式的参数
      */
     
-    func sessionDataTaskRequest(method: RequestMethodTypes, path: String, parameters:[String:String]){
+    func sessionDataTaskRequest(method: RequestMethodTypes,
+                                path: String,
+                                parameters:[String:String]){
         //1.创建会话用的URL
         var hostString = path//"http://127.0.0.1:8181/params"
         let escapeQueryString = query(parameters)   //对参数进行URL编码
@@ -121,7 +144,7 @@ class Request: BaseRequest {
                     return
                 }
                 
-                //逻辑失败
+                //接口返回错误信息失败
                 if result == RequestResultFaile {
                     guard let errorMessage = jsonDic[ErrorMessageKey] as? String else {
                         return

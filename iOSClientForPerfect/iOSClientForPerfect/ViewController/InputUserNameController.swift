@@ -8,29 +8,44 @@
 
 import UIKit
 
+/// 输入用户名页面
 class InputUserNameController: UIViewController {
 
     @IBOutlet var userNameTextField: UITextField!
     
+    //MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    //MARK: - Response Event
+    
+    /// 添加下一步按钮
+    ///
+    /// - Parameter sender:
     @IBAction func tapNextStepButton(_ sender: UIButton) {
         if userNameTextField.text! == "" {
             Tools.showTap(message: "请输入用户名", superVC: self)
             return
         }
-        
+        self.request()
+    }
+    
+    @IBAction func tapGestureRecongnizer(_ sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
+    
+    //MARK: - Prevate Method
+    
+    /// 通过用户名请求信息
+    private func request() {
         let userInfoReq = UserInfoRequest(start: {
-
+            
         }, success: { (userModel) in
             DispatchQueue.main.async {
                 self.goLoginOrRegister(userModel: userModel)
@@ -38,14 +53,17 @@ class InputUserNameController: UIViewController {
             
         }) { (errorMessage) in
             DispatchQueue.main.async {
-               Tools.showTap(message: errorMessage, superVC: self)
+                Tools.showTap(message: errorMessage, superVC: self)
             }
         }
-        
         userInfoReq.queryUserInfo(userName: userNameTextField.text!)
     }
 
-    func goLoginOrRegister(userModel: Any) {
+    
+    /// 跳转到密码输入页面
+    ///
+    /// - Parameter userModel: 
+    private func goLoginOrRegister(userModel: Any) {
         guard let model = userModel as? UserModel else {
             return
         }
@@ -59,9 +77,5 @@ class InputUserNameController: UIViewController {
         }
         vc.userInfo = model
         self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    @IBAction func tapGestureRecongnizer(_ sender: UITapGestureRecognizer) {
-        self.view.endEditing(true)
     }
 }
