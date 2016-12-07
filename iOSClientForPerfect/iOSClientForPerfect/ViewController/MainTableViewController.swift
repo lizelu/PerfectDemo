@@ -38,13 +38,12 @@ class MainTableViewController: UITableViewController {
                 Tools.showTap(message: errorMessage, superVC: self)
             }
         }
-        listRequest.fetchContentList(userId: AccountManager.share().userInfo.userId)
+        listRequest.fetchContentList(userId: AccountManager.share().userId)
     }
     
     @IBAction func tapLoginOutButton(_ sender: Any) {
         UserInfoRequest.loginOut()
-        self.dismiss(animated: true) {
-        }
+        UIApplication.shared.delegate?.window??.rootViewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginVCNC")
     }
 
     @IBAction func tapRefreshButton(_ sender: Any) {

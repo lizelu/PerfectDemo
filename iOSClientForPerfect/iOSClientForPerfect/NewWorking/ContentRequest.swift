@@ -96,7 +96,7 @@ class ContentRequest: BaseRequest {
             self.faile(errorMessage)
         }
         
-        let params: [String:String] = ["userId": AccountManager.share().userInfo.userId,
+        let params: [String:String] = ["userId": AccountManager.share().userId,
                                        "title": model.title,
                                        "content": model.content]
         request.postRequest(path: "\(requestPath)", parameters: params)

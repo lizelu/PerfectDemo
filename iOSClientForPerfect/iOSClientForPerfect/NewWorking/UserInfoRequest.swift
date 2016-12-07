@@ -66,8 +66,11 @@ class UserInfoRequest: BaseRequest {
                 userModel.password = userInfo["password"] ?? ""
                 userModel.regestTime = userInfo["registerTime"] ?? ""
             }
-            AccountManager.share().userInfo = userModel
-            self.recoderUserInfo(userModel: userModel)
+            AccountManager.share().userId = userModel.userId
+            AccountManager.share().userName = userModel.userName
+            AccountManager.share().password = userModel.password
+            AccountManager.share().regestTime = userModel.regestTime
+            self.recoderUserInfo()
             self.success(userModel)
             
         }) { (errorMessage) in
@@ -77,13 +80,12 @@ class UserInfoRequest: BaseRequest {
         request.postRequest(path: "\(requestPath)", parameters: params)
     }
     
-    func recoderUserInfo(userModel: UserModel) {
-        UserDefaults.standard.setValue(userModel.userName, forUndefinedKey: LoginUserNameKey)
-        UserDefaults.standard.setValue(userModel.password, forUndefinedKey: LoginPasswordKey)
+    func recoderUserInfo() {
+        let data = NSKeyedArchiver.archivedData(withRootObject: AccountManager.share())
+        UserDefaults.standard.setValue(data, forKey: LoginUserInfoKey)
     }
     
     static func loginOut() {
-        UserDefaults.standard.removeObject(forKey: LoginUserNameKey)
-        UserDefaults.standard.removeObject(forKey: LoginPasswordKey)
+        UserDefaults.standard.removeObject(forKey: LoginUserInfoKey)
     }
 }

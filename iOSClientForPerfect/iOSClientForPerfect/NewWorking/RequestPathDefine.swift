@@ -8,8 +8,7 @@
 
 import Foundation
 
-let LoginUserNameKey = "UserName"
-let LoginPasswordKey = "Password"
+let LoginUserInfoKey = "LoginUserInfoKey"
 let loginTokenKey = "key" //尚未实现，此Demo的二次登录先记录Password来实现
 
 
