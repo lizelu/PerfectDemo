@@ -371,7 +371,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.83499743439999996" green="0.93010875339999999" blue="0.73842527530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="aCu-84-pYy" firstAttribute="leading" secondItem="s8e-oR-I4g" secondAttribute="leadingMargin" constant="14" id="6ao-C8-7Cm"/>
