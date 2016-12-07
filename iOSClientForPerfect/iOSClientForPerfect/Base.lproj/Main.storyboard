@@ -365,40 +365,24 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aCu-84-pYy">
-                                <rect key="frame" x="30" y="90" width="317" height="340"/>
+                                <rect key="frame" x="30" y="90" width="317" height="377"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SgJ-JE-yPy">
-                                <rect key="frame" x="125" y="470" width="128" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="8DT-g5-nCJ"/>
-                                    <constraint firstAttribute="width" constant="128" id="sve-ts-Qlg"/>
-                                </constraints>
-                                <state key="normal" title="更新">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="tapSubmitButton:" destination="ek4-lr-0cU" eventType="touchUpInside" id="PRT-dw-wxd"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.83499743439999996" green="0.93010875339999999" blue="0.73842527530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="aCu-84-pYy" firstAttribute="leading" secondItem="s8e-oR-I4g" secondAttribute="leadingMargin" constant="14" id="6ao-C8-7Cm"/>
+                            <constraint firstItem="fes-Gj-Ddn" firstAttribute="top" secondItem="aCu-84-pYy" secondAttribute="bottom" constant="200" id="7iF-rp-TTf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Tyf-q9-2q7" secondAttribute="trailing" constant="12" id="DZA-ch-lqh"/>
                             <constraint firstItem="knC-Q8-NGU" firstAttribute="leading" secondItem="s8e-oR-I4g" secondAttribute="leadingMargin" constant="14" id="Hat-mu-WbP"/>
                             <constraint firstItem="Tyf-q9-2q7" firstAttribute="leading" secondItem="knC-Q8-NGU" secondAttribute="trailing" constant="8" id="PAh-7Q-pwG"/>
-                            <constraint firstItem="SgJ-JE-yPy" firstAttribute="top" secondItem="aCu-84-pYy" secondAttribute="bottom" constant="40" id="QAy-GA-MY4"/>
                             <constraint firstItem="knC-Q8-NGU" firstAttribute="top" secondItem="pjC-1i-Z4m" secondAttribute="bottom" constant="24" id="cM8-oW-hpm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aCu-84-pYy" secondAttribute="trailing" constant="12" id="gZm-Te-hmU"/>
                             <constraint firstItem="aCu-84-pYy" firstAttribute="top" secondItem="Tyf-q9-2q7" secondAttribute="bottom" constant="20" id="nbP-jq-XqD"/>
-                            <constraint firstItem="fes-Gj-Ddn" firstAttribute="top" secondItem="SgJ-JE-yPy" secondAttribute="bottom" constant="167" id="pQw-xe-uwS"/>
                             <constraint firstItem="Tyf-q9-2q7" firstAttribute="top" secondItem="pjC-1i-Z4m" secondAttribute="bottom" constant="20" id="pSi-HB-Zel"/>
-                            <constraint firstItem="SgJ-JE-yPy" firstAttribute="centerX" secondItem="s8e-oR-I4g" secondAttribute="centerX" constant="1.5" id="zxg-ty-QY4"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Yx4-c3-6zm" appends="YES" id="yiU-bs-usS"/>
@@ -406,7 +390,6 @@
                     </view>
                     <connections>
                         <outlet property="contentTextView" destination="aCu-84-pYy" id="uYv-9A-Y07"/>
-                        <outlet property="submitButton" destination="SgJ-JE-yPy" id="x5C-6U-WcN"/>
                         <outlet property="titleTextField" destination="Tyf-q9-2q7" id="R2x-eT-Gzd"/>
                     </connections>
                 </viewController>

@@ -18,9 +18,9 @@ enum ContentDetailType {
     func title() -> String {
         switch self {
         case .Add:
-            return "添加Note"
+            return "添加"
         case .Update:
-            return "更新Note"
+            return "更新"
         }
     }
 }
@@ -28,7 +28,6 @@ typealias RefreshMainTableView = () -> Void
 class ContentDetailViewController: UIViewController {
     @IBOutlet var titleTextField: UITextField!
     @IBOutlet var contentTextView: UITextView!
-    @IBOutlet var submitButton: UIButton!
     var updateMainVC : RefreshMainTableView!
     
     var content: ContentModel!
@@ -54,7 +53,7 @@ class ContentDetailViewController: UIViewController {
         self.view.endEditing(true)
     }
 
-    @IBAction func tapSubmitButton(_ sender: Any) {
+    func tapSubmitButton(_ sender: Any) {
         if self.titleTextField.text == "" {
             Tools.showTap(message: "请输入标题", superVC: self)
             return
@@ -74,7 +73,16 @@ class ContentDetailViewController: UIViewController {
     
     
     //MARK: - Private Method
+    
+    /// 添加分享按钮
+    func addSubmitButton() {
+        let barItem = UIBarButtonItem(title: self.vcType.title(), style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.tapSubmitButton(_:)))
+        self.navigationItem.rightBarButtonItem = barItem
+    }
+
+    
     private func configCurrentVC() {
+        self.addSubmitButton()
         if content == nil {
             self.vcType = .Add
         } else {
@@ -84,7 +92,6 @@ class ContentDetailViewController: UIViewController {
         }
         
         self.title = self.vcType.title()
-        self.submitButton.setTitle(self.vcType.title(), for: .normal)
     }
     
     
