@@ -168,6 +168,23 @@ routes.add(method: .post, uri: "/contentUpdate") { (request, response) in
     response.completed()
 }
 
+//删除内容
+routes.add(method: .post, uri: "/contentDelete") { (request, response) in
+    guard let contentId: String = request.param(name: "contentId") else {
+        LogFile.error("contentId为nil")
+        return
+    }
+    
+    guard let json = ContentOperator().deleteContent(contentId: contentId) else {
+        LogFile.error("josn为nil")
+        return
+    }
+    LogFile.info(json)
+    response.setBody(string: json)
+    response.completed()
+}
+
+
 
 
 

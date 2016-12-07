@@ -128,5 +128,25 @@ class ContentRequest: BaseRequest {
                                        "content": model.content]
         request.postRequest(path: "\(requestPath)", parameters: params)
     }
+    
+    
+    /// 删除当前记录
+    ///
+    /// - Parameter contentId: 当前ContentId
+    func contentDelete(contentId: String) {
+        let requestPath = "\(RequestHome)\(RequestContentDelete)"
+        let request = Request(start: {
+            self.start()
+        }, success: { (json) in
+            self.success(json)
+            
+        }) { (errorMessage) in
+            self.faile(errorMessage)
+        }
+        
+        let params: [String:String] = ["contentId": contentId]
+        request.postRequest(path: "\(requestPath)", parameters: params)
+    }
+
 
 }

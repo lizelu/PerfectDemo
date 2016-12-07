@@ -181,9 +181,7 @@ class ContentOperator: BaseOperator {
             
             var ary = [[String:String]]() //创建一个字典数组用于存储结果
             if results.numRows() == 0 {
-                self.responseJson[ResultKey] = RequestResultFaile
-                self.responseJson[ErrorMessageKey] = "尚没有录入新的Note, 请添加！"
-                LogFile.error("\(statement)尚没有录入新的Note, 请添加！")
+                LogFile.info("\(statement)尚没有录入新的Note, 请添加！")
             } else {
                 results.forEachRow { row in
                     var dic = [String:String]() //创建一个字典用于存储结果
@@ -193,10 +191,9 @@ class ContentOperator: BaseOperator {
                     dic["time"] = "\(row[3]!)"
                     ary.append(dic)
                 }
-                
-                self.responseJson[ResultKey] = RequestResultSuccess
                 self.responseJson[ResultListKey] = ary
             }
+            self.responseJson[ResultKey] = RequestResultSuccess
         }
         guard let josn = try? responseJson.jsonEncodedString() else {
             return nil
@@ -261,5 +258,25 @@ class ContentOperator: BaseOperator {
         }
         return josn
     }
+    
+    func deleteContent(contentId: String) -> String? {
+        let statement = "delete from \(contentTableName) where id='\(contentId)'"
+        LogFile.info("执行SQL:\(statement)")
+        
+        if !mysql.query(statement: statement) {
+            self.responseJson[ResultKey] = RequestResultFaile
+            self.responseJson[ErrorMessageKey] = "删除失败"
+            LogFile.error("\(statement)删除失败")
+        } else {
+            LogFile.info("SQL:\(statement) 删除成功")
+            self.responseJson[ResultKey] = RequestResultSuccess
+        }
+        
+        guard let josn = try? responseJson.jsonEncodedString() else {
+            return nil
+        }
+        return josn
+    }
+
 
 }

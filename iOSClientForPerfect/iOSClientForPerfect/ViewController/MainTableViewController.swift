@@ -63,6 +63,19 @@ class MainTableViewController: UITableViewController {
         }
         listRequest.fetchContentList(userId: AccountManager.share().userId)
     }
+    
+    func deleteItem(contentId: String) {
+        let deleteRequest = ContentRequest(start: {
+        }, success: { (contents) in
+            self.fetchList()
+            
+        }) { (errorMessage) in
+            DispatchQueue.main.async {
+                Tools.showTap(message: errorMessage, superVC: self)
+            }
+        }
+        deleteRequest.contentDelete(contentId: contentId)
+    }
 
     
     // MARK: - Table view data source
@@ -82,6 +95,8 @@ class MainTableViewController: UITableViewController {
         return cell
     }
     
+    // MARK: - UITableViewDelegate
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ContentDetailViewController") as? ContentDetailViewController else {
             return
@@ -92,5 +107,21 @@ class MainTableViewController: UITableViewController {
         }
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return .delete
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "删除"
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        let contentId = self.contents[indexPath.row].contentId
+        print(contentId)
+        self.deleteItem(contentId: contentId)
+    }
+    
+    
 
 }
