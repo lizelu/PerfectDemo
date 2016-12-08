@@ -33,7 +33,11 @@ class BaseOperator {
 class UserOperator: BaseOperator {
     let userTableName = "user"
     
-    //MARK: - Insert User Info,返回用户信息
+    
+    /// 由用户名查询用户信息
+    ///
+    /// - Parameter userName: 用户名
+    /// - Returns: 返回JSON数据
     func queryUserInfo(userName: String) -> String? {
         let statement = "select id, username from user where username = '\(userName)'"
         LogFile.info("执行SQL:\(statement)")
@@ -49,7 +53,6 @@ class UserOperator: BaseOperator {
             let results = mysql.storeResults()! //因为上一步已经验证查询是成功的，因此这里我们认为结果记录集可以强制转换为期望的数据结果。当然您如果需要也可以用if-let来调整这一段代码。
             
             var dic = [String:String]() //创建一个字典数组用于存储结果
-            
             results.forEachRow { row in
                 guard let userId = row.first! else {//保存选项表的Name名称字段，应该是所在行的第一列，所以是row[0].
                     return
@@ -68,7 +71,13 @@ class UserOperator: BaseOperator {
         return josn
     }
     
-    //MARK: - Insert User Info,返回用户信息
+    
+    /// 由用户名和密码查询用户信息
+    ///
+    /// - Parameters:
+    ///   - userName: 用户名
+    ///   - password: 用户密码
+    /// - Returns:
     func queryUserInfo(userName: String, password: String) -> String? {
         let statement = "select * from user where username='\(userName)' and password='\(password)'"
         LogFile.info("执行SQL:\(statement)")
@@ -144,8 +153,15 @@ class UserOperator: BaseOperator {
 class ContentOperator: BaseOperator {
     let contentTableName = "content"
     
+    
+    /// 添加比较
+    ///
+    /// - Parameters:
+    ///   - userId: 用户ID
+    ///   - title: 标题
+    ///   - content: 内容
+    /// - Returns: 返回结果JSON
     func addContent(userId: String, title: String, content: String) -> String? {
-        
         let values = "('\(userId)', '\(title)', '\(content)')"
         let statement = "insert into \(contentTableName) (userID, title, content) values \(values)"
         LogFile.info("执行SQL:\(statement)")
@@ -165,6 +181,11 @@ class ContentOperator: BaseOperator {
         return josn
     }
     
+    
+    /// 查询Note列表
+    ///
+    /// - Parameter userId: 用户ID
+    /// - Returns: 返回JSON
     func queryContentList(userId: String) -> String? {
         let statement = "select id, title, content, create_time from \(contentTableName) where userID='\(userId)'"
         LogFile.info("执行SQL:\(statement)")
@@ -202,6 +223,10 @@ class ContentOperator: BaseOperator {
     }
     
     
+    /// 查询Note详情
+    ///
+    /// - Parameter contentId: 内容ID
+    /// - Returns: 返回相关JOSN
     func queryContentDetail(contentId: String) -> String? {
         let statement = "select content from \(contentTableName) where id='\(contentId)'"
         LogFile.info("执行SQL:\(statement)")
@@ -240,6 +265,14 @@ class ContentOperator: BaseOperator {
         return josn
     }
     
+    
+    /// 更新内容
+    ///
+    /// - Parameters:
+    ///   - contentId: 更新内容的ID
+    ///   - title: 标题
+    ///   - content: 内容
+    /// - Returns: 返回结果JSON
     func updateContent(contentId: String, title: String, content: String) -> String? {
         let statement = "update \(contentTableName) set title='\(title)', content='\(content)', create_time=now() where id='\(contentId)'"
         LogFile.info("执行SQL:\(statement)")
@@ -259,6 +292,11 @@ class ContentOperator: BaseOperator {
         return josn
     }
     
+    
+    /// 删除内容
+    ///
+    /// - Parameter contentId: 删除内容的ID
+    /// - Returns: 返回删除结果
     func deleteContent(contentId: String) -> String? {
         let statement = "delete from \(contentTableName) where id='\(contentId)'"
         LogFile.info("执行SQL:\(statement)")

@@ -13,7 +13,7 @@ import PerfectLogger
 
 /// 连接MySql数据库的类
 class MySQLConnect {
-    var host: String {
+    var host: String {          //数据库IP
         get {
             return "127.0.0.1"
         }
@@ -21,23 +21,25 @@ class MySQLConnect {
     
     var port: String {
         get {
-            return "3306"
+            return "3306"       //数据库端口
         }
     }
     
-    var user: String {
+    var user: String {          //数据库用户名
         get {
             return "root"
         }
     }
     
-    var password: String {
+    var password: String {      //数据库密码
         get {
             return "admin!@#"
         }
     }
     
-    private var connect: MySQL!
+    private var connect: MySQL!             //用于操作MySql的句柄
+    
+    //MySQL句柄单例
     private static var instance: MySQL!
     public static func shareInstance(dataBaseName: String) -> MySQL{
         if instance == nil {
@@ -52,6 +54,8 @@ class MySQLConnect {
         self.selectDataBase(name: dataBaseName)
     }
     
+    
+    /// 连接数据库
     private func connectDataBase() {
         if connect == nil {
             connect = MySQL()
@@ -66,6 +70,10 @@ class MySQLConnect {
         LogFile.info("数据库连接成功")
     }
     
+    
+    /// 选择数据库Scheme
+    ///
+    /// - Parameter name: Scheme名
     func selectDataBase(name: String){
         // 选择具体的数据Schema
         guard connect.selectDatabase(named: name) else {

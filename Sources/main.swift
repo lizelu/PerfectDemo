@@ -226,6 +226,11 @@ routes.add(method: .get, uri: "/path3/**") { (request, response) in
 
 //优先级：路由变量 > 静态路由 > 通配符路径 > 结尾通配符
 
+
+
+
+
+
 //MARK: - 配置路由版本
 // 为程序接口API版本v1创建路由表
 var api = Routes()
@@ -256,6 +261,9 @@ routes.add(api2Routes)
 
 
 
+
+
+
 //MARK: - 返回图片
 routes.add(method: .get, uri: "/cat", handler: {
         request, response in
@@ -276,6 +284,8 @@ routes.add(method: .get, uri: "/cat", handler: {
 )
 
 
+
+
 //MARK: - 获取请求参数:
 func convertJons(params: [(String, String)]) -> String{
     var jsonDic:[String:String] = [:]
@@ -289,6 +299,7 @@ func convertJons(params: [(String, String)]) -> String{
     LogFile.debug(json)
     return json
 }
+
 
 func requestHandler(request: HTTPRequest, response:HTTPResponse) {
     response.setBody(string: convertJons(params:request.params()))
