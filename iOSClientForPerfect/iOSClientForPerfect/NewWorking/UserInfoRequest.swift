@@ -16,7 +16,11 @@ class UserInfoRequest: BaseRequest {
     ///
     /// - Parameter userName: 用户名
     func queryUserInfo(userName: String){
+        
+        //1.拼接请求路径
         let requestPath = "\(RequestHome)\(RequestUserInfoPath)"
+        
+        //2.实现闭包回调
         let request = Request(start: { 
             self.start()
         }, success: { (json) in
@@ -37,6 +41,7 @@ class UserInfoRequest: BaseRequest {
         }) { (errorMessage) in
             self.faile(errorMessage)
         }
+        
         let params: [String:String] = ["userName": userName]
         request.postRequest(path: "\(requestPath)", parameters: params)
     }

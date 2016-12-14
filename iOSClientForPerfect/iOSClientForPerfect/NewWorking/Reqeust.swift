@@ -8,19 +8,22 @@
 
 import Foundation
 
+//返回数据解析中使用的字符串常量
 let RequestResultSuccess: String = "SUCCESS"
 let RequestResultFaile: String = "FAILE"
 let ResultListKey = "list"
 let ResultKey = "result"
 let ErrorMessageKey = "errorMessage"
 
-typealias RequestStart = () -> Void
-typealias RequestSuccess = (Any) -> Void
-typealias RequestFailed = (String) -> Void
+//网络请求中的闭包回调
+typealias RequestStart = () -> Void         //开始请求
+typealias RequestSuccess = (Any) -> Void    //请求成功
+typealias RequestFailed = (String) -> Void  //请求失败
 
 //请求方式枚举
 enum RequestMethodTypes {
     case GET, POST, PUT, DELETE, CUSTOM(String)
+    
     /// Convert to String
     public var description: String {
         switch self {
@@ -46,12 +49,10 @@ class BaseRequest {
         self.success = success
         self.faile = faile
     }
-
 }
 
 //网络请求类--URLSession
 class Request: BaseRequest {
-    
     /// GET请求
     ///
     /// - Parameters:
@@ -61,7 +62,6 @@ class Request: BaseRequest {
                     parameters:[String:String]) {
         self.sessionDataTaskRequest(method: .GET, path: path, parameters: parameters)
     }
-    
     /// POST请求
     ///
     /// - Parameters:
@@ -71,7 +71,6 @@ class Request: BaseRequest {
                      parameters:[String:String]) {
         self.sessionDataTaskRequest(method: .POST, path: path, parameters: parameters)
     }
-    
     /// PUT请求
     ///
     /// - Parameters:
@@ -81,7 +80,6 @@ class Request: BaseRequest {
                     parameters:[String:String]) {
         self.sessionDataTaskRequest(method: .PUT, path: path, parameters: parameters)
     }
-    
     /// DELETE请求
     ///
     /// - Parameters:
@@ -107,28 +105,26 @@ class Request: BaseRequest {
         if method.description == "GET" {
             hostString += "?" + escapeQueryString
         }
-        let url: URL = URL(string: hostString)!
-        print("请求URL：\(hostString)")
-        print("请求方法：\(method)")
-        print("请求参数：\(parameters)")
+       
         //2.创建Request
+        let url: URL = URL(string: hostString)!
         let request: NSMutableURLRequest = NSMutableURLRequest.init(url: url)
         request.httpMethod = method.description //指定请求方式
         if method.description != "GET" {
             request.httpBody = escapeQueryString.data(using: String.Encoding.utf8)
         }
+        
         //3.获取Session单例，创建SessionDataTask
         let session: URLSession = URLSession.shared
         let sessionTask: URLSessionDataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) in
             if error != nil {
                 return
             }
-            
             if data != nil {    //对Data进行Json解析
                 guard let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) else {
                     return
                 }
-                print("响应报文：")
+            
                 guard let jsonDic = json as? [String: Any] else {
                     return
                 }
@@ -136,15 +132,13 @@ class Request: BaseRequest {
                 guard let result = jsonDic[ResultKey] as? String else {
                     return
                 }
-                
-                //请求成功
+                //响应成功
                 if result == RequestResultSuccess {
                     print(jsonDic)
                     self.success(jsonDic)
                     return
                 }
-                
-                //接口返回错误信息失败
+                //响应失败
                 if result == RequestResultFaile {
                     guard let errorMessage = jsonDic[ErrorMessageKey] as? String else {
                         return

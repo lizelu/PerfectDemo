@@ -30,6 +30,7 @@ let server = HTTPServer()
 // Register your own routes and handlers
 var routes = Routes()
 
+
 //MARK: - Note
 //根据用户名查询用户ID
 routes.add(method: .post, uri: "/queryUserInfoByUserName") { (request, response) in
@@ -409,11 +410,20 @@ server.setResponseFilters([(RequestLogger(), .low)])    // 最后增加低优先
 //LogFile.critical("严重错误")
 //LogFile.terminal("服务器终止")
 
+
+routes.add(method: .get, uri: "/", handler: {
+    request, response in
+    response.setHeader(.contentType, value: "text/html")
+    response.appendBody(string: "<html><title>你好!</title><body><h3>Hello, Swift-Perfect!</h3></body></html>")
+    response.completed()
+}
+)
+
 // Add the routes to the server.
 server.addRoutes(routes)
 
 // Set a listen port of 8181
-server.serverPort = 8181
+server.serverPort = 8888
 
 // Set a document root.
 // This is optional. If you do not want to serve static content then do not set this.
