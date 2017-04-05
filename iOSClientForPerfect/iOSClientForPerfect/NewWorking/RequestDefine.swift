@@ -13,7 +13,7 @@ let loginTokenKey = "key" //尚未实现，此Demo的二次登录先记录Passwo
 
 //与请求相关的定义
 //let RequestHome = "http://10.10.146.198:8181"               //host
-let RequestHome = "http://127.0.0.1:8181"               //host
+let RequestHome = "http://127.0.0.1:8888"               //host
 let RequestUserInfoPath = "/queryUserInfoByUserName"    //通过用户名查询用户信息
 let RequestUserLogin = "/login"                         //登录
 let RequestUserRegister = "/register"                   //注册
