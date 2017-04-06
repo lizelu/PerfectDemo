@@ -47,6 +47,7 @@ class InputUserNameController: UIViewController {
         let userInfoReq = UserInfoRequest(start: {
             
         }, success: { (userModel) in
+            dump(userModel)
             DispatchQueue.main.async {
                 self.goLoginOrRegister(userModel: userModel)
             }

@@ -114,6 +114,7 @@ class Request: BaseRequest {
             request.httpBody = escapeQueryString.data(using: String.Encoding.utf8)
         }
         
+        print(parameters)
         //3.获取Session单例，创建SessionDataTask
         let session: URLSession = URLSession.shared
         let sessionTask: URLSessionDataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) in

@@ -73,10 +73,10 @@ class ContentRequest: BaseRequest {
             }
             let contentModel = ContentModel()
             if contentDetail["list"] != nil {
-                guard let content = contentDetail["list"]! as? [String:String] else {
+                guard let content = contentDetail["list"]! as? [String:Any] else {
                     return
                 }
-                contentModel.content = content["content"] ?? ""
+                contentModel.content = content["content"] as! String? ?? ""
             }
             
             self.success(contentModel)
