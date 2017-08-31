@@ -15,11 +15,11 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E484372A-958B-477E-9544-73095BBA1006",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "9197B75B1BC29921D6E3B1CCDC2B258350009F3A" : "PerfectDemo\/Packages\/PerfectHTTP-2.0.6\/",
+    "9197B75B1BC29921D6E3B1CCDC2B258350009F3A" : "PerfectDemo\/Packages\/PerfectHTTP-2.0.7\/",
     "B123C9ACF68A2BF01173B652DA8ABD73F990D1DE" : "PerfectDemo\/Packages\/MySQL-2.0.4\/",
     "0DB265A27CDDC64A18EA25283516A81AC9340CFA" : "PerfectDemo\/",
     "735A06A83BD3E78D8C3B53C09F33A6FB7CEBF8E1" : "PerfectDemo\/Packages\/PerfectLogger-0.0.7\/",
-    "C4127C9B9C8FDF608B532AD72407863CE2797629" : "PerfectDemo\/Packages\/PerfectHTTPServer-2.0.7\/",
+    "C4127C9B9C8FDF608B532AD72407863CE2797629" : "PerfectDemo\/Packages\/PerfectHTTPServer-2.0.8\/",
     "52F974CF368298658E2D7486B02A88D6A4358B85" : "PerfectDemo\/Packages\/PerfectRequestLogger-0.2.0\/",
     "0B9B07A57A7603A158703662ACDD6F3ABAA339F4" : "..\/PerfectDemo\/PerfectTemplate",
     "59B0DD3A0DC0B86D2A06DD4B68CBD1C997876614" : ""

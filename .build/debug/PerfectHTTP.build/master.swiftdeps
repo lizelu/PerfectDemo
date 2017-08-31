@@ -1,13 +1,13 @@
 version: "Apple Swift version 3.0.1 (swiftlang-800.0.58.6 clang-800.0.42.1)"
-options: "3adca3616de55e98441ed484a05311dd"
-build_time: [533977214, 571089000]
+options: "c83c7a51e4e9bb80ac6493c923b2a994"
+build_time: [534070922, 102139000]
 inputs:
-  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/PerfectHTTP-2.0.6/Sources/HTTPFilter.swift": [533714847, 0]
-  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/PerfectHTTP-2.0.6/Sources/HTTPHeaders.swift": [533714847, 0]
-  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/PerfectHTTP-2.0.6/Sources/HTTPMethod.swift": [533714847, 0]
-  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/PerfectHTTP-2.0.6/Sources/HTTPRequest.swift": [533714847, 0]
-  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/PerfectHTTP-2.0.6/Sources/HTTPResponse.swift": [533714847, 0]
-  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/PerfectHTTP-2.0.6/Sources/MimeReader.swift": [533714847, 0]
-  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/PerfectHTTP-2.0.6/Sources/MimeType.swift": [533714847, 0]
-  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/PerfectHTTP-2.0.6/Sources/Routing.swift": [533714847, 0]
-  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/PerfectHTTP-2.0.6/Sources/StaticFileHandler.swift": [533714847, 0]
+  "/Users/lizelu/Documents/Github/PerfectDemo/Packages/PerfectHTTP-2.0.7/Sources/HTTPFilter.swift": [534047201, 0]
+  "/Users/lizelu/Documents/Github/PerfectDemo/Packages/PerfectHTTP-2.0.7/Sources/HTTPHeaders.swift": [534047201, 0]
+  "/Users/lizelu/Documents/Github/PerfectDemo/Packages/PerfectHTTP-2.0.7/Sources/HTTPMethod.swift": [534047201, 0]
+  "/Users/lizelu/Documents/Github/PerfectDemo/Packages/PerfectHTTP-2.0.7/Sources/HTTPRequest.swift": [534047201, 0]
+  "/Users/lizelu/Documents/Github/PerfectDemo/Packages/PerfectHTTP-2.0.7/Sources/HTTPResponse.swift": [534047201, 0]
+  "/Users/lizelu/Documents/Github/PerfectDemo/Packages/PerfectHTTP-2.0.7/Sources/MimeReader.swift": [534047201, 0]
+  "/Users/lizelu/Documents/Github/PerfectDemo/Packages/PerfectHTTP-2.0.7/Sources/MimeType.swift": [534047201, 0]
+  "/Users/lizelu/Documents/Github/PerfectDemo/Packages/PerfectHTTP-2.0.7/Sources/Routing.swift": [534047201, 0]
+  "/Users/lizelu/Documents/Github/PerfectDemo/Packages/PerfectHTTP-2.0.7/Sources/StaticFileHandler.swift": [534047201, 0]

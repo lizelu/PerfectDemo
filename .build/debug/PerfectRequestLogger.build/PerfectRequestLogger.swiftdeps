@@ -8,34 +8,34 @@ provides-member:
 - ["C20PerfectRequestLogger13RequestLogger", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "UnicodeScalarType"
-- "UInt32"
 - "RequestLogger"
-- !private "StringLiteralType"
-- "HTTPResponseFilterResult"
-- !private "*"
-- !private "+="
-- !private "arc4random_uniform"
-- "CastingPrecedence"
-- "HTTPRequestFilter"
-- "HTTPResponseFilter"
-- "AssignmentPrecedence"
-- !private "Date"
-- "Int"
-- "HTTPResponse"
-- !private "FloatLiteralType"
-- "HTTPRequest"
-- "String"
-- !private "..<"
-- !private "PerfectNet"
-- "HTTPRequestFilterResult"
-- !private "IntegerLiteralType"
-- "randomAlphaNumericString"
+- !private "Log"
 - "TernaryPrecedence"
-- !private "LogFile"
+- !private "IntegerLiteralType"
+- "UInt32"
+- "Int"
+- !private "FloatLiteralType"
+- !private "arc4random_uniform"
+- !private "+="
+- !private "UnicodeScalarType"
+- "HTTPResponseFilter"
+- "HTTPResponseFilterResult"
+- "CastingPrecedence"
+- "AssignmentPrecedence"
+- "HTTPRequestFilter"
+- "HTTPResponse"
+- "String"
+- "HTTPRequest"
+- !private "Date"
+- !private "*"
+- !private "StringLiteralType"
+- !private "PerfectNet"
+- !private "..<"
+- "HTTPRequestFilterResult"
+- "randomAlphaNumericString"
 depends-member:
 - !private ["Ps9AnyObject", "Date"]
-- !private ["Ps9AnyObject", "LogFile"]
+- !private ["Ps9AnyObject", "Log"]
 - !private ["Ps9AnyObject", "characters"]
 - ["Ps9AnyObject", "filter"]
 - ["Ps9AnyObject", "filterBody"]
@@ -205,7 +205,7 @@ depends-member:
 - !private ["P11PerfectHTTP11HTTPRequest", "serverName"]
 - !private ["P11PerfectHTTP11HTTPRequest", "uri"]
 - !private ["P11PerfectHTTP17HTTPRequestFilter", "Date"]
-- !private ["P11PerfectHTTP17HTTPRequestFilter", "LogFile"]
+- !private ["P11PerfectHTTP17HTTPRequestFilter", "Log"]
 - ["P11PerfectHTTP17HTTPRequestFilter", "filter"]
 - ["P11PerfectHTTP17HTTPRequestFilter", "filterBody"]
 - ["P11PerfectHTTP17HTTPRequestFilter", "filterHeaders"]
@@ -220,7 +220,7 @@ depends-member:
 - !private ["P11PerfectHTTP12HTTPResponse", "request"]
 - !private ["P11PerfectHTTP12HTTPResponse", "status"]
 - !private ["P11PerfectHTTP18HTTPResponseFilter", "Date"]
-- !private ["P11PerfectHTTP18HTTPResponseFilter", "LogFile"]
+- !private ["P11PerfectHTTP18HTTPResponseFilter", "Log"]
 - ["P11PerfectHTTP18HTTPResponseFilter", "filter"]
 - ["P11PerfectHTTP18HTTPResponseFilter", "filterBody"]
 - ["P11PerfectHTTP18HTTPResponseFilter", "filterHeaders"]
@@ -287,7 +287,7 @@ depends-member:
 - !private ["P10PerfectLib15JSONConvertible", "init"]
 - !private ["P10PerfectLib15JSONConvertible", "startIndex"]
 - !private ["P10PerfectLib15JSONConvertible", "subscript"]
-- !private ["V13PerfectLogger7LogFile", "info"]
+- !private ["V10PerfectLib3Log", "info"]
 - !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps25LosslessStringConvertible", "characters"]
 - !private ["Ps25LosslessStringConvertible", "index"]
@@ -365,7 +365,7 @@ depends-member:
 - ["C20PerfectRequestLogger13RequestLogger", "HTTPRequestFilterResult"]
 - ["C20PerfectRequestLogger13RequestLogger", "HTTPResponse"]
 - ["C20PerfectRequestLogger13RequestLogger", "HTTPResponseFilterResult"]
-- !private ["C20PerfectRequestLogger13RequestLogger", "LogFile"]
+- !private ["C20PerfectRequestLogger13RequestLogger", "Log"]
 - !private ["C20PerfectRequestLogger13RequestLogger", "PerfectNet"]
 - ["C20PerfectRequestLogger13RequestLogger", "String"]
 - ["C20PerfectRequestLogger13RequestLogger", "UInt32"]
@@ -557,7 +557,7 @@ depends-nominal:
 - !private "Ps17IntegerArithmetic"
 - !private "Ps16IteratorProtocol"
 - !private "P10PerfectLib15JSONConvertible"
-- !private "V13PerfectLogger7LogFile"
+- !private "V10PerfectLib3Log"
 - !private "Ps25LosslessStringConvertible"
 - !private "Ps10MirrorPath"
 - !private "Ps17MutableCollection"
@@ -615,59 +615,56 @@ depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectLib.swiftmodule"
+- "/Users/lizelu/Documents/Github/PerfectDemo/.build/debug/PerfectLib.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/CHTTPParser.build/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectHTTP.swiftmodule"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../ssl.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../srtp.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../ssl23.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../pqueue.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../dtls1.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../tls1.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../ssl3.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../ssl2.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../opensslconf.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../kssl.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../hmac.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../pem2.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../e_os2.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../pem.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../pkcs7.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../x509_vfy.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../sha.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../dh.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../dsa.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../rsa.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../ecdh.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../ecdsa.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../ec.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../bn.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../asn1.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../obj_mac.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../objects.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../evp.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../buffer.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../x509.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../comp.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../lhash.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../err.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../symhacks.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../ossl_typ.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../opensslv.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../safestack.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../stack.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../crypto.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../bio.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/openssl.h"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/module.modulemap"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectNet.swiftmodule"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectThread.swiftmodule"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/PerfectLogger.swiftmodule"
-- "/Users/lizelu/Documents/GitHub/PerfectDemo/.build/debug/SwiftMoment.swiftmodule"
-interface-hash: "b7ac9cb76e498e2aad1698a0b5fb75a6"
+- "/Users/lizelu/Documents/Github/PerfectDemo/.build/debug/PerfectHTTP.swiftmodule"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../ssl.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../srtp.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../ssl23.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../pqueue.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../dtls1.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../tls1.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../ssl3.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../ssl2.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../opensslconf.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../kssl.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../hmac.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../pem2.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../e_os2.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../pem.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../pkcs7.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../x509_vfy.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../sha.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../dh.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../dsa.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../rsa.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../ecdh.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../ecdsa.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../ec.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../bn.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../asn1.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../obj_mac.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../objects.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../evp.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../buffer.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../x509.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../comp.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../lhash.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../err.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../symhacks.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../ossl_typ.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../opensslv.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../safestack.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../stack.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../crypto.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/../bio.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/openssl.h"
+- "/Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/module.modulemap"
+- "/Users/lizelu/Documents/Github/PerfectDemo/.build/debug/PerfectNet.swiftmodule"
+- "/Users/lizelu/Documents/Github/PerfectDemo/.build/debug/PerfectThread.swiftmodule"
+interface-hash: "5071216648a65e0b16abb488806bd079"

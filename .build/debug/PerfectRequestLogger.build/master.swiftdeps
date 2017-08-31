@@ -1,5 +1,5 @@
 version: "Apple Swift version 3.0.1 (swiftlang-800.0.58.6 clang-800.0.42.1)"
-options: "43308642514583589f8ba8bdee0aed4b"
-build_time: [533977218, 640523000]
+options: "3f8f8b9e0798f6e089f09c8f82f21fd8"
+build_time: [534070925, 304932000]
 inputs:
-  "/Users/lizelu/Documents/GitHub/PerfectDemo/Packages/PerfectRequestLogger-0.2.0/Sources/PerfectRequestLogger.swift": [533964451, 0]
+  "/Users/lizelu/Documents/Github/PerfectDemo/Packages/PerfectRequestLogger-0.2.0/Sources/PerfectRequestLogger.swift": [534047767, 0]

@@ -1,15 +1,11 @@
 dependencies: \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/PerfectHTTPServer-2.0.7/Sources/CHTTPParser/http_parser.c \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/module.modulemap \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include/module.modulemap \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/PerfectHTTPServer-2.0.8/Sources/CHTTPParser/http_parser.c \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/module.modulemap \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/PerfectHTTPServer-2.0.8/Sources/CHTTPParser/include/module.modulemap \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/PerfectHTTPServer-2.0.8/Sources/CHTTPParser/http_parser.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/PerfectHTTPServer-2.0.8/Sources/CHTTPParser/include/http_parser.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/module.modulemap \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/dispatch/module.modulemap \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/mach-o/module.map \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/objc/module.map \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/simd/module.modulemap \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/xpc/module.modulemap \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/PerfectHTTPServer-2.0.7/Sources/CHTTPParser/http_parser.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/PerfectHTTPServer-2.0.7/Sources/CHTTPParser/include/http_parser.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include/module.modulemap \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include/__stddef_max_align_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/sys/cdefs.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/sys/_symbol_aliasing.h \

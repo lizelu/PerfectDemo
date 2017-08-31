@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/gost_ctl.c \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/module.modulemap \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/gost_ctl.c \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/include/module.modulemap \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include/module.modulemap \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/module.modulemap \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include/__stddef_max_align_t.h \
@@ -472,37 +472,37 @@ dependencies: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/sys/vcmd.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/libc.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/sysexits.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/crypto.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/e_os2.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/opensslconf.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/stack.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/safestack.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/opensslv.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/ossl_typ.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/symhacks.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/err.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/bio.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/lhash.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/engine.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/bn.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/rsa.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/asn1.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/dsa.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/dh.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/ecdh.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/ec.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/ecdsa.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/rand.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/ui.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/x509.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/buffer.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/evp.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/objects.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/obj_mac.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/sha.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/x509_vfy.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/pkcs7.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/gost_lcl.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/asn1t.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/gost89.h \
-  /Users/lizelu/Documents/GitHub/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/gosthash.h
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/crypto.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/e_os2.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/opensslconf.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/stack.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/safestack.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/opensslv.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/ossl_typ.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/symhacks.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/err.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/bio.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/lhash.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/engine.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/bn.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/rsa.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/asn1.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/dsa.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/dh.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/ecdh.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/ec.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/ecdsa.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/rand.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/ui.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/x509.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/buffer.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/evp.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/objects.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/obj_mac.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/sha.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/x509_vfy.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/pkcs7.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/gost_lcl.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/asn1t.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/gost89.h \
+  /Users/lizelu/Documents/Github/PerfectDemo/Packages/COpenSSL-2.0.2/COpenSSL/gosthash.h
